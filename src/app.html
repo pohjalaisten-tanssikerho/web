@@ -7,6 +7,34 @@
 		%sveltekit.head%
 	</head>
 	<body>
-		<div>%sveltekit.body%</div>
+		<div class="body">%sveltekit.body%</div>
 	</body>
+  <style lang="scss" global>
+    :root {
+      --color-white: #E9F3FF;
+      --color-orange: #FB9039;
+      --color-night-blue: #022140;
+      --color-light-blue: #05386B;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+    }
+    body {
+      font-family: "Noto Sans", "Noto Sans JP", "Meiryo", "sans-serif";
+      color: var(--color-white);
+      background-image: url(img/bg.jpg);
+    }
+    a {
+      transition: .3s;
+      text-decoration: none;
+      color: var(--color-white);
+    }
+    a:hover {
+      color: var(--color-orange);
+    }
+  </style>
 </html>

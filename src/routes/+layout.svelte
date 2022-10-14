@@ -44,7 +44,23 @@
   </footer>
 </div>
 
-<style lang="scss">
+<style lang="scss" global>
+  a {
+    transition: .3s;
+    text-decoration: none;
+    color: var(--color-white);
+  }
+  a:hover {
+    color: var(--color-orange);
+  }
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-decoration-color: orange;
+    padding-top: 1em;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -57,7 +73,7 @@
       align-items: center;
       border-top: 3px solid var(--color-light-blue);
       border-bottom: 3px solid var(--color-light-blue);
-      height: 3em;
+      padding: .9em;
       background: var(--color-night-blue);
       & .header-middle {
         text-transform: uppercase;
@@ -65,7 +81,7 @@
           text-decoration: none;
           color: var(--color-white);
           transition: .3s;
-          margin: .9em;
+          margin: 0 .9em;
           font-size: .9em;
           &:hover {
             color: var(--color-orange);
@@ -80,6 +96,7 @@
       display: flex;
       justify-content: center;
       gap: 1em;
+      padding-top: 1.7em;
       & section {
         & nav {
           display: flex;
@@ -89,6 +106,34 @@
       }
       & nav {
       }
+    }
+  }
+  main {
+    padding-bottom: 1.7em;
+    & * {
+      width: 640px;
+      margin: 0 auto;
+
+    }
+    & p {
+      margin-top: .2em;
+      margin-bottom: .6em;
+      font-size: .95em;
+    }
+    & ol {
+      padding-left: 3em;
+      margin-bottom: .8em;
+      font-size: .95em;
+      & li {
+        margin-bottom: .3em;
+      }
+    }
+    & h1 {
+      width: unset;
+      padding-bottom: .8em;
+    }
+    & .jumbotron, .sections {
+      width: unset;
     }
   }
 </style>

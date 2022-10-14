@@ -19,6 +19,9 @@
 
 
 <style lang="scss">
+  h1 {
+    padding-bottom: 0;
+  }
   .jumbotron {
     background-image: url(img/picture/hanne-ilmari.jpg);
     background-size: cover;

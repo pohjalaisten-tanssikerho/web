@@ -45,6 +45,13 @@
 </div>
 
 <style lang="scss" global>
+
+/* CSS Targeting navigation header "ETUSIVU" (Hannu) / not working sos
+nav header-middle > a { 
+
+} */
+
+
   a {
     transition: .3s;
     text-decoration: none;

@@ -46,8 +46,8 @@
 
 <style lang="scss" global>
 
-/* CSS Targeting navigation header "ETUSIVU" (Hannu) / not working sos
-nav header-middle > a { 
+/* CSS Targeting navigation header "ETUSIVU" (Hannu) / 
+nav .header-middle a { 
 
 } */
 
@@ -110,6 +110,17 @@ nav header-middle > a {
           flex-wrap: nowrap;
           flex-direction: column;
         }
+      }
+/*  footer.container--footer section h3 targeting footer h3 headers */
+     footer.container--footer section h3::before {
+        content: " ";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        background-color: #fb9039;
+        transform: scaleX(0.7) rotate(45deg);
+        left: 3px;
+        top: 29px;
       }
       & nav {
       }

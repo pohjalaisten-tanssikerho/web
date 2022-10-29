@@ -23,7 +23,7 @@
     padding-bottom: 0;
   }
   .jumbotron {
-    background-image: url(img/picture/hanne-ilmari.jpg);
+    background-image: url(/img/picture/hanne-ilmari.jpg);
     background-size: cover;
     border-bottom: 3px solid var(--color-light-blue);
     & h1 {

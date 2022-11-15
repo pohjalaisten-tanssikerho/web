@@ -125,6 +125,20 @@
       gap: 1em;
       padding-top: 1.7em;
       section {
+       position: relative;
+       h3 {
+        padding-left: 1.4em;
+       }
+        h3::before {
+          content: " ";
+          width: 15px;
+          height: 15px;
+          position: absolute;
+          background-color: #fb9039;
+          transform: scaleX(0.7) rotate(45deg);
+          left: 0;
+          top: 4px;       
+        }
         nav {
           display: flex;
           flex-wrap: nowrap;

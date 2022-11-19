@@ -131,13 +131,13 @@
        }
         h3::before {
           content: " ";
-          width: 15px;
-          height: 15px;
+          width: 0.9375em;
+          height: 0.9375em;
           position: absolute;
           background-color: #fb9039;
           transform: scaleX(0.7) rotate(45deg);
           left: 0;
-          top: 4px;       
+          top: .25em;       
         }
         nav {
           display: flex;
@@ -273,7 +273,7 @@
         border-right: var(--border-values);
         border-bottom: var(--border-values);
         background-color: var(--color-night-blue);
-        span {
+        span {    
         h4 {
           color: var(--color-orange);
         }

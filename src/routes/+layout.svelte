@@ -1,5 +1,4 @@
 <script lang="ts">
-  import "../app.postcss";
   let isMenuOpen = false
   const toggleMenu = () => isMenuOpen = !isMenuOpen
 </script>

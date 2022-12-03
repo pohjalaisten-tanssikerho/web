@@ -115,6 +115,19 @@
     flex-direction: column;
     flex-wrap: nowrap;
     height: 100vh;
+nav.header-middle {
+  z-index: 1
+}
+nav.header-middle span h4::before {
+  content: " ";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  background-color: #05386b;
+  transform: scaleX(0.7) rotate(45deg);
+  left: 0.1875em;
+  z-index: -1;
+}
     footer.container--footer {
       flex: 1;
       background-color: var(--color-night-blue);
@@ -130,13 +143,13 @@
        }
         h3::before {
           content: " ";
-          width: 15px;
-          height: 15px;
+          width: 0.9375em;
+          height: 0.9375em;
           position: absolute;
           background-color: #fb9039;
           transform: scaleX(0.7) rotate(45deg);
           left: 0;
-          top: 4px;       
+          top: .25em;       
         }
         nav {
           display: flex;
@@ -272,7 +285,7 @@
         border-right: var(--border-values);
         border-bottom: var(--border-values);
         background-color: var(--color-night-blue);
-        span {
+        span {    
         h4 {
           color: var(--color-orange);
         }

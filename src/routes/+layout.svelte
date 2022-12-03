@@ -116,6 +116,19 @@
     flex-direction: column;
     flex-wrap: nowrap;
     height: 100vh;
+nav.header-middle {
+  z-index: 1
+}
+nav.header-middle span h4::before {
+  content: " ";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  background-color: #05386b;
+  transform: scaleX(0.7) rotate(45deg);
+  left: 0.1875em;
+  z-index: -1;
+}
     footer.container--footer {
       flex: 1;
       background-color: var(--color-night-blue);

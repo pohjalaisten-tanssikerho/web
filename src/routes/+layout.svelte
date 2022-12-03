@@ -116,7 +116,7 @@
     flex-wrap: nowrap;
     height: 100vh;
 nav.header-middle {
-  z-index: 1
+  z-index: 1;
 }
 nav.header-middle span h4::before {
   content: " ";

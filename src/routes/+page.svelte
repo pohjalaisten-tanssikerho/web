@@ -1,3 +1,7 @@
+<script>
+  import TwinView from '$lib/twinView.svelte'
+</script>
+
 <div class="jumbotron">
   <h1>Pohjalaisten tanssikerho</h1>
   <em>Opetusta, bileitä ja ekskursioita. Pohjalaisten tanssikerho tuo opiskelijan elämään tanssin iloa.</em>
@@ -14,7 +18,11 @@
   </div>
 </div>
 <div>
-  // main content
+  <TwinView 
+    imgSrc="Prop passed as title"
+  >
+    <p>Contentof TwinView.</p>
+  </TwinView>
 </div>
 
 

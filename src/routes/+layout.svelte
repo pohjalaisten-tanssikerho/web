@@ -161,11 +161,6 @@ nav.header-middle span h4::before {
   }
   main {
     padding-bottom: 1.7em;
-    * {
-      width: 640px;
-      margin: 0 auto;
-
-    }
     p {
       margin-top: .2em;
       margin-bottom: .6em;

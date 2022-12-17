@@ -1,32 +1,305 @@
-<html lang="en"><head>
-    <meta charset="utf-8">
-    <link rel="icon" href="http://127.0.0.1:5173/favicon.png">
-    <meta name="viewport" content="width=device-width">
-    
+<script lang="ts">
+	let isMenuOpen = false;
+	const toggleMenu = () => (isMenuOpen = !isMenuOpen);
+</script>
 
-<style type="text/css">:root{--border-values:3px solid var(--color-light-blue)}a{transition:0.3s;text-decoration:none;color:var(--color-white)}a:hover{color:var(--color-orange)}h1{text-align:center;font-size:2.5em;text-decoration:underline;text-decoration-thickness:5px;text-decoration-color:orange;padding-top:1em}.container{display:flex;flex-direction:column;flex-wrap:nowrap;height:100vh}.container nav.header-middle{z-index:1}.container nav.header-middle span h4::before{content:" ";width:18px;height:18px;position:absolute;background-color:#05386b;transform:scaleX(0.7) rotate(45deg);left:0.1875em;z-index:-1}.container footer.container--footer{flex:1;background-color:var(--color-night-blue);border-top:var(--border-values);display:flex;justify-content:center;gap:1em;padding-top:1.7em}.container footer.container--footer section{position:relative}.container footer.container--footer section h3{padding-left:1.4em}.container footer.container--footer section h3::before{content:" ";width:0.9375em;height:0.9375em;position:absolute;background-color:#fb9039;transform:scaleX(0.7) rotate(45deg);left:0;top:0.25em}.container footer.container--footer section nav{display:flex;flex-wrap:nowrap;flex-direction:column}main{padding-bottom:1.7em}main *{width:640px;margin:0 auto}main p{margin-top:0.2em;margin-bottom:0.6em;font-size:0.95em}main ol{padding-left:3em;margin-bottom:0.8em;font-size:0.95em}main ol li{margin-bottom:0.3em}main h1{width:unset;padding-bottom:0.8em}main .jumbotron,main .sections{width:unset}@media only screen and (min-width: 580px){div.headers{display:flex;flex-wrap:nowrap;justify-content:space-between;align-items:center;border-top:var(--border-values);border-bottom:var(--border-values);background:var(--color-night-blue)}div.headers nav.header-left span{display:none}div.headers nav.header-middle{text-transform:uppercase;display:block}div.headers nav.header-middle a{text-decoration:none;color:var(--color-white);transition:0.3s}div.headers nav.header-middle a:hover{color:var(--color-orange)}div.headers nav.header-middle span{position:relative}div.headers nav.header-middle span h4{display:inline-block;font-weight:normal;text-decoration:none;font-size:0.9em;margin:0 1em;padding:1em 0}div.headers nav.header-middle span h4:hover~div{visibility:visible;opacity:1}div.headers nav.header-middle span div:hover{visibility:visible;opacity:1}div.headers nav.header-middle span div{position:absolute;visibility:hidden;opacity:0;background:var(--color-night-blue);left:-0.7em;padding:0.7em;border:var(--border-values);border-top:none;width:max-content;z-index:1;transition:visibility 0.3s, opacity 0.3s ease-in-out}div.headers nav.header-middle span div h4{color:var(--color-orange);margin:0;padding:0.6em 0 0.3em 0;font-weight:bold}div.headers nav.header-middle span div ol li{display:block;text-transform:none}div.headers nav.header-middle span div ol li a{margin:0;font-size:0.9em}}@media only screen and (max-width: 579px){div.headers nav.header-left{font-size:0.9em;padding:1em;border-top:var(--border-values);border-bottom:var(--border-values);background-color:var(--color-night-blue)}div.headers nav.header-left .menu-toggler{cursor:pointer}div.headers nav.header-middle{position:absolute;display:none;z-index:1;padding:1em;border-right:var(--border-values);border-bottom:var(--border-values);background-color:var(--color-night-blue)}div.headers nav.header-middle span h4{color:var(--color-orange)}div.headers nav.header-middle span div ol{list-style-type:none;font-size:0.95em}div.headers nav.header-middle.open{display:block}}.s-7IPF32Wcq3s8{}</style></head>
-<body>
-    <div class="body"><div class="container s-7IPF32Wcq3s8"><div class="headers s-7IPF32Wcq3s8"><nav class="header-left s-7IPF32Wcq3s8"><span class="menu-toggler s-7IPF32Wcq3s8">Menu</span></nav> <nav class="header-middle  s-7IPF32Wcq3s8"><span class="s-7IPF32Wcq3s8"><h4 class="s-7IPF32Wcq3s8"><a href="/" class="s-7IPF32Wcq3s8">Etusivu</a></h4></span> <span class="s-7IPF32Wcq3s8"><h4 class="s-7IPF32Wcq3s8"><a href="/src/routes/kurssi.svelte" class="s-7IPF32Wcq3s8">Kurssit</a></h4> <div class="s-7IPF32Wcq3s8"><ol class="s-7IPF32Wcq3s8"><li class="s-7IPF32Wcq3s8"><a href="/kurssit/yleista-kursseista" class="s-7IPF32Wcq3s8">Yleistä kursseista</a></li> <li class="s-7IPF32Wcq3s8"><a href="/kurssit/kurssiaikataulut ja lajit" class="s-7IPF32Wcq3s8">Kurssiaikataulut ja lajit</a></li> <li class="s-7IPF32Wcq3s8"><a href="/kurssit/ilmoittautuminen" class="s-7IPF32Wcq3s8">Ilmoittautuminen</a></li> <li class="s-7IPF32Wcq3s8"><a href="/kurssit/hinnasto-ja-maksaminen" class="s-7IPF32Wcq3s8">Hinnasto ja maksaminen</a></li></ol> <h4 class="s-7IPF32Wcq3s8">Kurssit</h4> <ol class="s-7IPF32Wcq3s8"><li class="s-7IPF32Wcq3s8"><a href="/foobar" class="s-7IPF32Wcq3s8">Alkeiskurssi</a></li> <li class="s-7IPF32Wcq3s8"><a href="/foobar" class="s-7IPF32Wcq3s8">Alkeisjatko</a></li> <li class="s-7IPF32Wcq3s8"><a href="/foobar" class="s-7IPF32Wcq3s8">Jatkokurssi</a></li></ol></div></span> <span class="s-7IPF32Wcq3s8"><h4 class="s-7IPF32Wcq3s8"><a href="/tapahtumat" class="s-7IPF32Wcq3s8">Tapahtumat</a></h4></span> <span class="s-7IPF32Wcq3s8"><h4 class="s-7IPF32Wcq3s8"><a href="/hallitus" class="s-7IPF32Wcq3s8">Hallitus</a></h4></span> <span class="s-7IPF32Wcq3s8"><h4 class="s-7IPF32Wcq3s8">Blogi</h4> <div class="s-7IPF32Wcq3s8"><ol class="s-7IPF32Wcq3s8"><li class="s-7IPF32Wcq3s8"><a href="/blogit/kisaaminen" class="s-7IPF32Wcq3s8">Kisaaminen</a></li> <li class="s-7IPF32Wcq3s8"><a href="/blogit/lavaetiketti" class="s-7IPF32Wcq3s8">Lavaetiketti</a></li> <li class="s-7IPF32Wcq3s8"><a href="/blogit/tanssilajit" class="s-7IPF32Wcq3s8">Tanssilajit</a></li> <li class="s-7IPF32Wcq3s8"><a href="/blogit/kisaaminen" class="s-7IPF32Wcq3s8">Kisaaminen</a></li> <li class="s-7IPF32Wcq3s8"><a href="/blogit/vuosi-hallituksessa" class="s-7IPF32Wcq3s8">Vuosi hallituksessa</a></li></ol></div></span></nav> <nav class="header-right s-7IPF32Wcq3s8"></nav></div> <main class="s-7IPF32Wcq3s8"><h1>404</h1> <pre>Not Found</pre>  <!--<Error>--></main> <footer class="container--footer s-7IPF32Wcq3s8"><section class="s-7IPF32Wcq3s8"><h3 class="s-7IPF32Wcq3s8">Pohjalaisten tanssikerho ry</h3> <nav class="footer-left s-7IPF32Wcq3s8"><a href="/ry/yhdistyksen-saannot" class="s-7IPF32Wcq3s8">Yhdistyksen säännöt</a> <a href="/ry/liity-aktiiviksi" class="s-7IPF32Wcq3s8">Liity aktiiviksi</a> <a href="/ry/kannatusjasenyys" class="s-7IPF32Wcq3s8">Kannatusjäsenyys</a></nav></section> <section class="s-7IPF32Wcq3s8"><h3 class="s-7IPF32Wcq3s8">Yhteystiedot ja some</h3> <nav class="footer-middle s-7IPF32Wcq3s8"><a href="some/facebook" class="s-7IPF32Wcq3s8">Facebook</a> <a href="some/whatsapp" class="s-7IPF32Wcq3s8">WhatsApp</a> <a href="some/sahkopostilista" class="s-7IPF32Wcq3s8">Sähköpostilista</a> <a href="dummy" class="s-7IPF32Wcq3s8">pohjalaistentanssikerho.ry(ät)gmail.com</a></nav></section> <section class="s-7IPF32Wcq3s8"><h3 class="s-7IPF32Wcq3s8">Osoite</h3> <nav class="footer-right s-7IPF32Wcq3s8"><span class="s-7IPF32Wcq3s8">Töölönkatu 3 A, 00910 Helsinki, 5krs.</span> <a href="dummy" class="s-7IPF32Wcq3s8">Avaa Reittioppaalla</a> <a href="dummy" class="s-7IPF32Wcq3s8">Avaa Google Mapsilla</a></nav></section></footer></div><!--<+layout>--> <div id="svelte-announcer" aria-live="assertive" aria-atomic="true" style="position: absolute; left: 0px; top: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); overflow: hidden; white-space: nowrap; width: 1px; height: 1px;"></div><!--<Root>--></div>
+<div class="container">
+	<div class="headers">
+		<nav class="header-left">
+			<span class="menu-toggler" on:click={toggleMenu}>Menu</span>
+		</nav>
+		<nav class="header-middle {isMenuOpen ? 'open' : ''}">
+			<span>
+				<h4><a href="/">Etusivu</a></h4>
+			</span>
+			<span>
+				<h4><a href="/src/routes/kurssi.svelte">Kurssit</a></h4>
+				<div>
+					<ol>
+						<li><a href="/kurssit/yleista-kursseista">Yleistä kursseista</a></li>
+						<li><a href="/kurssit/kurssiaikataulut ja lajit">Kurssiaikataulut ja lajit</a></li>
+						<li><a href="/kurssit/ilmoittautuminen">Ilmoittautuminen</a></li>
+						<li><a href="/kurssit/hinnasto-ja-maksaminen">Hinnasto ja maksaminen</a></li>
+					</ol>
+					<h4>Kurssit</h4>
+					<ol>
+						<li>
+							<a href="/foobar">Alkeiskurssi</a>
+						</li>
+						<li>
+							<a href="/foobar">Alkeisjatko</a>
+						</li>
+						<li>
+							<a href="/foobar">Jatkokurssi</a>
+						</li>
+					</ol>
+				</div>
+			</span>
+			<span>
+				<h4><a href="/tapahtumat">Tapahtumat</a></h4>
+			</span>
+			<span>
+				<h4><a href="/hallitus">Hallitus</a></h4>
+			</span>
+			<span>
+				<h4>Blogi</h4>
+				<div>
+					<ol>
+						<li><a href="/blogit/kisaaminen">Kisaaminen</a></li>
+						<li><a href="/blogit/lavaetiketti">Lavaetiketti</a></li>
+						<li><a href="/blogit/tanssilajit">Tanssilajit</a></li>
+						<li><a href="/blogit/kisaaminen">Kisaaminen</a></li>
+						<li><a href="/blogit/vuosi-hallituksessa">Vuosi hallituksessa</a></li>
+					</ol>
+				</div>
+			</span>
+		</nav>
+		<nav class="header-right" />
+	</div>
 
-<style lang="scss" global="">
-:root {
-  --color-white: #E9F3FF;
-  --color-orange: #FB9039;
-  --color-night-blue: #022140;
-  --color-light-blue: #05386B;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-}
-body {
-  font-family: "Noto Sans", "Noto Sans JP", "Meiryo", "sans-serif";
-  color: var(--color-white);
-  background-image: url(/img/bg.jpg);
-}
+	<main>
+		<slot />
+	</main>
+
+	<footer class="container--footer">
+		<section>
+			<h3>Pohjalaisten tanssikerho ry</h3>
+			<nav class="footer-left">
+				<a href="/ry/yhdistyksen-saannot">Yhdistyksen säännöt</a>
+				<a href="/ry/liity-aktiiviksi">Liity aktiiviksi</a>
+				<a href="/ry/kannatusjasenyys">Kannatusjäsenyys</a>
+			</nav>
+		</section>
+		<section>
+			<h3>Yhteystiedot ja some</h3>
+			<nav class="footer-middle">
+				<a href="some/facebook">Facebook</a>
+				<a href="some/whatsapp">WhatsApp</a>
+				<a href="some/sahkopostilista">Sähköpostilista</a>
+				<a href="dummy">pohjalaistentanssikerho.ry(ät)gmail.com</a>
+			</nav>
+		</section>
+		<section>
+			<h3>Osoite</h3>
+			<nav class="footer-right">
+				<span>Töölönkatu 3 A, 00910 Helsinki, 5krs.</span>
+				<a href="dummy">Avaa Reittioppaalla</a>
+				<a href="dummy">Avaa Google Mapsilla</a>
+			</nav>
+		</section>
+	</footer>
+</div>
+
+<style lang="scss" global>
+	:root {
+		--border-values: 3px solid var(--color-light-blue);
+	}
+	a {
+		transition: 0.3s;
+		text-decoration: none;
+		color: var(--color-white);
+	}
+	a:hover {
+		color: var(--color-orange);
+	}
+	h1 {
+		text-align: center;
+		font-size: 2.5em;
+		text-decoration: underline;
+		text-decoration-thickness: 5px;
+		text-decoration-color: orange;
+		padding-top: 1em;
+	}
+	.container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		height: 100vh;
+		nav.header-middle {
+			z-index: 1;
+		}
+		nav.header-middle span h4::before {
+			content: ' ';
+			width: 18px;
+			height: 18px;
+			position: absolute;
+			background-color: #05386b;
+			transform: scaleX(0.7) rotate(45deg);
+			left: 0.1875em;
+			z-index: -1;
+		}
+		footer.container--footer {
+			flex: 1;
+			background-color: var(--color-night-blue);
+			border-top: var(--border-values);
+			display: flex;
+			justify-content: center;
+			gap: 1em;
+			padding-top: 1.7em;
+			section {
+				position: relative;
+				h3 {
+					padding-left: 1.4em;
+				}
+				h3::before {
+					content: ' ';
+					width: 0.9375em;
+					height: 0.9375em;
+					position: absolute;
+					background-color: #fb9039;
+					transform: scaleX(0.7) rotate(45deg);
+					left: 0;
+					top: 0.25em;
+				}
+				nav {
+					display: flex;
+					flex-wrap: nowrap;
+					flex-direction: column;
+				}
+			}
+		}
+	}
+	main {
+		padding-bottom: 1.7em;
+		* {
+			width: 640px;
+			margin: 0 auto;
+		}
+		p {
+			margin-top: 0.2em;
+			margin-bottom: 0.6em;
+			font-size: 0.95em;
+		}
+		ol {
+			padding-left: 3em;
+			margin-bottom: 0.8em;
+			font-size: 0.95em;
+			li {
+				margin-bottom: 0.3em;
+			}
+		}
+		h1 {
+			width: unset;
+			padding-bottom: 0.8em;
+		}
+		.jumbotron,
+		.sections {
+			width: unset;
+		}
+	}
+	// navigation max-width
+	@media only screen and (min-width: 580px) {
+		div.headers {
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: center;
+			border-top: var(--border-values);
+			border-bottom: var(--border-values);
+			background: var(--color-night-blue);
+			nav.header-left {
+				span {
+					display: none;
+				}
+			}
+			nav.header-middle {
+				text-transform: uppercase;
+				display: block;
+				a {
+					text-decoration: none;
+					color: var(--color-white);
+					transition: 0.3s;
+					// margin: 0 1.4em;
+					// font-size: .9em;
+					&:hover {
+						color: var(--color-orange);
+					}
+				}
+				span {
+					position: relative;
+					h4 {
+						display: inline-block;
+						font-weight: normal;
+						text-decoration: none;
+						font-size: 0.9em;
+						margin: 0 1em;
+						padding: 1em 0;
+					}
+					h4:hover ~ div {
+						visibility: visible;
+						opacity: 1;
+					}
+					div:hover {
+						visibility: visible;
+						opacity: 1;
+					}
+					div {
+						position: absolute;
+						visibility: hidden;
+						opacity: 0;
+						background: var(--color-night-blue);
+						left: -0.7em;
+						padding: 0.7em;
+						border: var(--border-values);
+						border-top: none;
+						width: max-content;
+						z-index: 1;
+						transition: visibility 0.3s, opacity 0.3s ease-in-out;
+						h4 {
+							color: var(--color-orange);
+							margin: 0;
+							padding: 0.6em 0 0.3em 0;
+							font-weight: bold;
+						}
+						ol li {
+							display: block;
+							text-transform: none;
+							a {
+								margin: 0;
+								font-size: 0.9em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	// navigation min-width
+	@media only screen and (max-width: 579px) {
+		div.headers {
+			nav.header-left {
+				font-size: 0.9em;
+				padding: 1em;
+				border-top: var(--border-values);
+				border-bottom: var(--border-values);
+				background-color: var(--color-night-blue);
+				.menu-toggler {
+					cursor: pointer;
+				}
+			}
+			nav.header-middle {
+				position: absolute;
+				display: none;
+				z-index: 1;
+				padding: 1em;
+				border-right: var(--border-values);
+				border-bottom: var(--border-values);
+				background-color: var(--color-night-blue);
+				span {
+					h4 {
+						color: var(--color-orange);
+					}
+					div {
+						ol {
+							list-style-type: none;
+							font-size: 0.95em;
+						}
+					}
+				}
+			}
+			nav.header-middle.open {
+				display: block;
+			}
+		}
+	}
 </style>
-
-</body></html>

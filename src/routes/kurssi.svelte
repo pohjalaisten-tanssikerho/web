@@ -1,226 +1,32 @@
-<!doctype html>
-<html lang=fi>
-<head>
-    <title>Pohjalaisten Tanssikerho</title>
-    <meta charset=utf-8>
-    <meta name=viewport content="width=device-width,initial-scale=1">
-    <link rel=stylesheet href=/sass/index.min.2da82688632e697ca5e2c7f7c4e71097c555e57d495f7dbe0ba8167258577c5f.css integrity="sha256-LagmiGMuaXyl4sf3xOcQl8VV5X1JX32&#43;C6gWclhXfF8=" media=all>
-    <link rel=icon type=image/svg+xml href=/favicon.svg>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel=stylesheet>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175353356-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-175353356-1');
-    </script>
-</head>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <link rel="icon" href="http://127.0.0.1:5173/favicon.png">
+    <meta name="viewport" content="width=device-width">
+    
+
+<style type="text/css">:root{--border-values:3px solid var(--color-light-blue)}a{transition:0.3s;text-decoration:none;color:var(--color-white)}a:hover{color:var(--color-orange)}h1{text-align:center;font-size:2.5em;text-decoration:underline;text-decoration-thickness:5px;text-decoration-color:orange;padding-top:1em}.container{display:flex;flex-direction:column;flex-wrap:nowrap;height:100vh}.container nav.header-middle{z-index:1}.container nav.header-middle span h4::before{content:" ";width:18px;height:18px;position:absolute;background-color:#05386b;transform:scaleX(0.7) rotate(45deg);left:0.1875em;z-index:-1}.container footer.container--footer{flex:1;background-color:var(--color-night-blue);border-top:var(--border-values);display:flex;justify-content:center;gap:1em;padding-top:1.7em}.container footer.container--footer section{position:relative}.container footer.container--footer section h3{padding-left:1.4em}.container footer.container--footer section h3::before{content:" ";width:0.9375em;height:0.9375em;position:absolute;background-color:#fb9039;transform:scaleX(0.7) rotate(45deg);left:0;top:0.25em}.container footer.container--footer section nav{display:flex;flex-wrap:nowrap;flex-direction:column}main{padding-bottom:1.7em}main *{width:640px;margin:0 auto}main p{margin-top:0.2em;margin-bottom:0.6em;font-size:0.95em}main ol{padding-left:3em;margin-bottom:0.8em;font-size:0.95em}main ol li{margin-bottom:0.3em}main h1{width:unset;padding-bottom:0.8em}main .jumbotron,main .sections{width:unset}@media only screen and (min-width: 580px){div.headers{display:flex;flex-wrap:nowrap;justify-content:space-between;align-items:center;border-top:var(--border-values);border-bottom:var(--border-values);background:var(--color-night-blue)}div.headers nav.header-left span{display:none}div.headers nav.header-middle{text-transform:uppercase;display:block}div.headers nav.header-middle a{text-decoration:none;color:var(--color-white);transition:0.3s}div.headers nav.header-middle a:hover{color:var(--color-orange)}div.headers nav.header-middle span{position:relative}div.headers nav.header-middle span h4{display:inline-block;font-weight:normal;text-decoration:none;font-size:0.9em;margin:0 1em;padding:1em 0}div.headers nav.header-middle span h4:hover~div{visibility:visible;opacity:1}div.headers nav.header-middle span div:hover{visibility:visible;opacity:1}div.headers nav.header-middle span div{position:absolute;visibility:hidden;opacity:0;background:var(--color-night-blue);left:-0.7em;padding:0.7em;border:var(--border-values);border-top:none;width:max-content;z-index:1;transition:visibility 0.3s, opacity 0.3s ease-in-out}div.headers nav.header-middle span div h4{color:var(--color-orange);margin:0;padding:0.6em 0 0.3em 0;font-weight:bold}div.headers nav.header-middle span div ol li{display:block;text-transform:none}div.headers nav.header-middle span div ol li a{margin:0;font-size:0.9em}}@media only screen and (max-width: 579px){div.headers nav.header-left{font-size:0.9em;padding:1em;border-top:var(--border-values);border-bottom:var(--border-values);background-color:var(--color-night-blue)}div.headers nav.header-left .menu-toggler{cursor:pointer}div.headers nav.header-middle{position:absolute;display:none;z-index:1;padding:1em;border-right:var(--border-values);border-bottom:var(--border-values);background-color:var(--color-night-blue)}div.headers nav.header-middle span h4{color:var(--color-orange)}div.headers nav.header-middle span div ol{list-style-type:none;font-size:0.95em}div.headers nav.header-middle.open{display:block}}.s-7IPF32Wcq3s8{}</style></head>
 <body>
-    <div class=container>
-        <nav>
-            <div class=left></div>
-            <div class=middle>
-                <span class="hide mobile-header">
-                    <a href=# onclick=toggleMobileMenu()>
-                        <div class=logo-bullet></div>
-                        <span class=mobile-menu>menu</span>
-                    </a>
-                    <script>
-                    function toggleMobileMenu() {
-                        document.querySelector(".mobile-header .logo-bullet").classList.toggle('highlight')
-                        document.querySelector("nav ul").classList.toggle("visible")
-                        let menuList = document.querySelectorAll("nav ul li")
-                        let display = (menuList[0].style.display == "") ? "block" : ""
-                        for (i = 0; i < menuList.length; i++) {
-                            menuList[i].style.display = display
-                        }
-                    }
-                    </script>
-                </span>
-                <ul>
-                    <li>
-                        <a href=/>
-                            <div class=logo-bullet></div>
-                            ETUSIVU
-                        </a>
-                    </li>
-                    <li>
-                        <a href=/kurssi/>
-                            <div class=logo-bullet></div>
-                            KURSSIT
-                        </a>
-                        <ul>
-                            <li>
-                                <a href=/kurssi/yleista-kursseista/>Yleistä kursseista</a>
-                            </li>
-                            <li>
-                                <a href=/kurssi/kurssiaikataulut-ja-lajit/>Kurssiaikataulut ja lajit</a>
-                            </li>
-                            <li>
-                                <a href=/kurssi/ilmoittautuminen/>Ilmoittautuminen</a>
-                            </li>
-                            <li>
-                                <a href=/kurssi/hinnasto-ja-maksaminen/>Hinnasto ja maksaminen</a>
-                            </li>
-                            <li>
-                                <h4>kurssit</h4>
-                            </li>
-                            <li>
-                                <a href=/kurssi/kausi/alkeiskurssi/>Alkeiskurssi</a>
-                            </li>
-                            <li>
-                                <a href=/kurssi/kausi/alkeisjatko/>Alkeisjatko</a>
-                            </li>
-                            <li>
-                                <a href=/kurssi/kausi/jatkokurssi/>Jatkokurssi</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href=/tapahtuma/>
-                            <div class=logo-bullet></div>
-                            TAPAHTUMAT
-                        </a>
-                        <ul>
-                            <div class=menu-item>
-                                <li class=sm-margin>
-                                    <a href=/tapahtuma/pot-tanssibileet-221216/>POT Tanssibileet</a>
-                                </li>
-                                <li class=sm-print>16.12.2022</li>
-                                <li class=sm-print>Botta</li>
-                                <li class=sm-print>18:00 - 23:45</li>
-                            </div>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href=/hallitus/>
-                            <div class=logo-bullet></div>
-                            HALLITUS
-                        </a>
-                    </li>
-                    <li>
-                        <a href=/blogi/>
-                            <div class=logo-bullet></div>
-                            BLOGI
-                        </a>
-                        <ul>
-                            <li>
-                                <a href=/blogi/kisaaminen/>Kisaaminen</a>
-                            </li>
-                            <li>
-                                <a href=/blogi/lavaetiketti/>Lavaetiketti</a>
-                            </li>
-                            <li>
-                                <a href=/blogi/tanssilajit/>Tanssilajit</a>
-                            </li>
-                            <li>
-                                <a href=/blogi/vastauksia-palautteisiin/>Vastauksia palautteisiin</a>
-                            </li>
-                            <li>
-                                <a href=/blogi/vuosi-hallituksessa/>Vuosi hallituksessa</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class=right></div>
-        </nav>
-        <div class=content>
-            <div class=list>
-                <h3>
-                    <a href=/kurssi/yleista-kursseista/>Yleistä kursseista</a>
-                </h3>
-                <p>Kaikille viikottaisille kursseille yhteistä asiaa ja käytäntöjä.</p>
-                <h3>
-                    <a href=/kurssi/kurssiaikataulut-ja-lajit/>Kurssiaikataulut ja lajit</a>
-                </h3>
-                <p>Kaikkien viikottaisten kurssien aikataulut ja lajit.</p>
-                <h3>
-                    <a href=/kurssi/ilmoittautuminen/>Ilmoittautuminen</a>
-                </h3>
-                <p>Ilmoittaudu kursseille.</p>
-                <h3>
-                    <a href=/kurssi/hinnasto-ja-maksaminen/>Hinnasto ja maksaminen</a>
-                </h3>
-                <p>Kaikkien kurssien hintatiedot ja maksuohjeet.</p>
-                <h1>Kurssitarjonta</h1>
-                <h3>
-                    <a href=/kurssi/kausi/alkeiskurssi/>Alkeiskurssi</a>
-                </h3>
-                <p>Tanssin ensiasekeleet.</p>
-                <h3>
-                    <a href=/kurssi/kausi/alkeisjatko/>Alkeisjatko</a>
-                </h3>
-                <p>Vähän edistyneimmille. Kannattaa olla vähän myös lavatanssikokemusta.</p>
-                <h3>
-                    <a href=/kurssi/kausi/jatkokurssi/>Jatkokurssi</a>
-                </h3>
-                <p>Pitkälle edistyneille tanssijoille. Täällä tanssitekniikka ja kuviot hiotaan yhä parempaan kuntoon.</p>
-            </div>
-        </div>
-        <div class=footer>
-            <div class=general>
-                <div class=logo-bullet></div>
-                <h2 class=sub-header>Pohjalaisten tanssikerho ry</h2>
-                <ul>
-                    <li>
-                        <a href=/ry/yhdistyksen-saannot/>Yhdistyksen säännöt</a>
-                    </li>
-                    <li>
-                        <a href=/ry/liity-aktiiviksi/>Liity aktiiviksi</a>
-                    </li>
-                    <li>
-                        <a href=/ry/kannatusjasenyys/>Kannatusjäsenyys</a>
-                    </li>
-                </ul>
-            </div>
-            <div class=some>
-                <div class=logo-bullet></div>
-                <h2>Yhteystiedot ja some</h2>
-                <ul>
-                    <li>
-                        <a href=https://www.facebook.com/groups/pot.tanssikerho/>Facebook</a>
-                    </li>
-                    <li>
-                        <a href=/whatsapp/>WhatsApp</a>
-                    </li>
-                    <li>
-                        <a href=/sahkopostilista/>Sähköpostilista</a>
-                    </li>
-                    <li>
-                        <a>pohjalaistentanssikerho . ry (ät) gmail . com</a>
-                    </li>
-                </ul>
-            </div>
-            <div class=contacts>
-                <div class=logo-bullet></div>
-                <h2>Osoite</h2>
-                <ul>
-                    <li>
-                        <span>Töölönkatu 3 A, 00940 Helsinki, 5krs.</span>
-                    </li>
-                    <li>
-                        <a href=https://reittiopas.hsl.fi/T%C3%B6%C3%B6l%C3%B6nkatu%203%2C%20Helsinki%3A%3A60.173962%2C24.931228/-/lahellasi>Avaa Reittioppaalla</a>
-                    </li>
-                    <li>
-                        <a href=https://www.google.com/maps/place/T%C3%B6%C3%B6l%C3%B6nkatu+3,+00101+Helsinki/>Avaa Google Mapsilla</a>
-                    </li>
-                </ul>
-            </div>
-            <div class=bottom-fill></div>
-        </div>
-    </div>
-    <script type=text/javascript>
-    let resizeTimer;
-    window.addEventListener("resize", () => {
-        document.body.classList.add("resize-animation-stopper");
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            document.body.classList.remove("resize-animation-stopper");
-        }, 400);
-    });
-    </script>
-</body>
-</html>
+    <div class="body"><div class="container s-7IPF32Wcq3s8"><div class="headers s-7IPF32Wcq3s8"><nav class="header-left s-7IPF32Wcq3s8"><span class="menu-toggler s-7IPF32Wcq3s8">Menu</span></nav> <nav class="header-middle  s-7IPF32Wcq3s8"><span class="s-7IPF32Wcq3s8"><h4 class="s-7IPF32Wcq3s8"><a href="/" class="s-7IPF32Wcq3s8">Etusivu</a></h4></span> <span class="s-7IPF32Wcq3s8"><h4 class="s-7IPF32Wcq3s8"><a href="/src/routes/kurssi.svelte" class="s-7IPF32Wcq3s8">Kurssit</a></h4> <div class="s-7IPF32Wcq3s8"><ol class="s-7IPF32Wcq3s8"><li class="s-7IPF32Wcq3s8"><a href="/kurssit/yleista-kursseista" class="s-7IPF32Wcq3s8">Yleistä kursseista</a></li> <li class="s-7IPF32Wcq3s8"><a href="/kurssit/kurssiaikataulut ja lajit" class="s-7IPF32Wcq3s8">Kurssiaikataulut ja lajit</a></li> <li class="s-7IPF32Wcq3s8"><a href="/kurssit/ilmoittautuminen" class="s-7IPF32Wcq3s8">Ilmoittautuminen</a></li> <li class="s-7IPF32Wcq3s8"><a href="/kurssit/hinnasto-ja-maksaminen" class="s-7IPF32Wcq3s8">Hinnasto ja maksaminen</a></li></ol> <h4 class="s-7IPF32Wcq3s8">Kurssit</h4> <ol class="s-7IPF32Wcq3s8"><li class="s-7IPF32Wcq3s8"><a href="/foobar" class="s-7IPF32Wcq3s8">Alkeiskurssi</a></li> <li class="s-7IPF32Wcq3s8"><a href="/foobar" class="s-7IPF32Wcq3s8">Alkeisjatko</a></li> <li class="s-7IPF32Wcq3s8"><a href="/foobar" class="s-7IPF32Wcq3s8">Jatkokurssi</a></li></ol></div></span> <span class="s-7IPF32Wcq3s8"><h4 class="s-7IPF32Wcq3s8"><a href="/tapahtumat" class="s-7IPF32Wcq3s8">Tapahtumat</a></h4></span> <span class="s-7IPF32Wcq3s8"><h4 class="s-7IPF32Wcq3s8"><a href="/hallitus" class="s-7IPF32Wcq3s8">Hallitus</a></h4></span> <span class="s-7IPF32Wcq3s8"><h4 class="s-7IPF32Wcq3s8">Blogi</h4> <div class="s-7IPF32Wcq3s8"><ol class="s-7IPF32Wcq3s8"><li class="s-7IPF32Wcq3s8"><a href="/blogit/kisaaminen" class="s-7IPF32Wcq3s8">Kisaaminen</a></li> <li class="s-7IPF32Wcq3s8"><a href="/blogit/lavaetiketti" class="s-7IPF32Wcq3s8">Lavaetiketti</a></li> <li class="s-7IPF32Wcq3s8"><a href="/blogit/tanssilajit" class="s-7IPF32Wcq3s8">Tanssilajit</a></li> <li class="s-7IPF32Wcq3s8"><a href="/blogit/kisaaminen" class="s-7IPF32Wcq3s8">Kisaaminen</a></li> <li class="s-7IPF32Wcq3s8"><a href="/blogit/vuosi-hallituksessa" class="s-7IPF32Wcq3s8">Vuosi hallituksessa</a></li></ol></div></span></nav> <nav class="header-right s-7IPF32Wcq3s8"></nav></div> <main class="s-7IPF32Wcq3s8"><h1>404</h1> <pre>Not Found</pre>  <!--<Error>--></main> <footer class="container--footer s-7IPF32Wcq3s8"><section class="s-7IPF32Wcq3s8"><h3 class="s-7IPF32Wcq3s8">Pohjalaisten tanssikerho ry</h3> <nav class="footer-left s-7IPF32Wcq3s8"><a href="/ry/yhdistyksen-saannot" class="s-7IPF32Wcq3s8">Yhdistyksen säännöt</a> <a href="/ry/liity-aktiiviksi" class="s-7IPF32Wcq3s8">Liity aktiiviksi</a> <a href="/ry/kannatusjasenyys" class="s-7IPF32Wcq3s8">Kannatusjäsenyys</a></nav></section> <section class="s-7IPF32Wcq3s8"><h3 class="s-7IPF32Wcq3s8">Yhteystiedot ja some</h3> <nav class="footer-middle s-7IPF32Wcq3s8"><a href="some/facebook" class="s-7IPF32Wcq3s8">Facebook</a> <a href="some/whatsapp" class="s-7IPF32Wcq3s8">WhatsApp</a> <a href="some/sahkopostilista" class="s-7IPF32Wcq3s8">Sähköpostilista</a> <a href="dummy" class="s-7IPF32Wcq3s8">pohjalaistentanssikerho.ry(ät)gmail.com</a></nav></section> <section class="s-7IPF32Wcq3s8"><h3 class="s-7IPF32Wcq3s8">Osoite</h3> <nav class="footer-right s-7IPF32Wcq3s8"><span class="s-7IPF32Wcq3s8">Töölönkatu 3 A, 00910 Helsinki, 5krs.</span> <a href="dummy" class="s-7IPF32Wcq3s8">Avaa Reittioppaalla</a> <a href="dummy" class="s-7IPF32Wcq3s8">Avaa Google Mapsilla</a></nav></section></footer></div><!--<+layout>--> <div id="svelte-announcer" aria-live="assertive" aria-atomic="true" style="position: absolute; left: 0px; top: 0px; clip: rect(0px, 0px, 0px, 0px); clip-path: inset(50%); overflow: hidden; white-space: nowrap; width: 1px; height: 1px;"></div><!--<Root>--></div>
+
+<style lang="scss" global="">
+:root {
+  --color-white: #E9F3FF;
+  --color-orange: #FB9039;
+  --color-night-blue: #022140;
+  --color-light-blue: #05386B;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+}
+body {
+  font-family: "Noto Sans", "Noto Sans JP", "Meiryo", "sans-serif";
+  color: var(--color-white);
+  background-image: url(/img/bg.jpg);
+}
+</style>
+
+</body></html>

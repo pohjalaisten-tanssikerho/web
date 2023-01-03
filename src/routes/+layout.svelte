@@ -13,17 +13,26 @@
         <h4><a href="/">Etusivu</a></h4>
       </span>
       <span>
-        <h4><a href="/src/routes/kurssit">Kurssit</a></h4>
+        <h4><a href="/kurssit">Kurssit</a></h4>
         <div>
           <ol>
             <li><a href="/kurssit/yleista-kursseista">Yleistä kursseista</a></li>
-            <li><a href="/kurssit/kurssiaikataulut ja lajit">Kurssiaikataulut ja lajit</a></li>
+            <li><a href="/kurssit/kurssiaikataulut-ja-lajit">Kurssiaikataulut ja lajit</a></li>
             <li><a href="/kurssit/ilmoittautuminen">Ilmoittautuminen</a></li>
             <li><a href="/kurssit/hinnasto-ja-maksaminen">Hinnasto ja maksaminen</a></li>
           </ol>
           <h4>Kurssit</h4>
           <ol>
             <li> 
+              <a href="/kurssit/alkeiskurssi">Alkeiskurssi</a>
+            </li>
+            <li>
+            <a href="/kurssit/alkeisjatko">Alkeisjatko</a>
+          </li>
+          <li>
+            <a href="/kurssit/jatkokurssi">Jatkokurssi</a>
+          </li>
+             <!-- foobar? t. hannu
               <a href="/foobar">Alkeiskurssi</a> 
             </li>
             <li>
@@ -32,6 +41,7 @@
             <li>
               <a href="/foobar">Jatkokurssi</a>
             </li>
+          -->
           </ol>
         </div>
       </span>

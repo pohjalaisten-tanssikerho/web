@@ -32,7 +32,7 @@
           <li>
             <a href="/kurssit/jatkokurssi">Jatkokurssi</a>
           </li>
-             <!-- foobar? t. hannu
+             <!-- foobar? tarvitseeko muuttaa t. hannu
               <a href="/foobar">Alkeiskurssi</a> 
             </li>
             <li>
@@ -52,7 +52,7 @@
         <h4><a href="/hallitus">Hallitus</a></h4>
       </span>
       <span>
-        <h4>Blogi</h4>
+        <h4><a href="/blogit">Blogi</a></h4>
         <div>
           <ol>
             <li><a href="/blogit/kisaaminen">Kisaaminen</li>

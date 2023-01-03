@@ -13,7 +13,7 @@
         <h4><a href="/">Etusivu</a></h4>
       </span>
       <span>
-        <h4><a href="/src/routes/kurssi.svelte">Kurssit</a></h4>
+        <h4><a href="/src/routes/kurssit">Kurssit</a></h4>
         <div>
           <ol>
             <li><a href="/kurssit/yleista-kursseista">Yleistä kursseista</a></li>

@@ -20,3 +20,13 @@
 		</p>
 	</div>
 </div>
+
+<style lang="scss">
+	body {
+		font-family: noto sans, noto sans jp meiryo, sans-serif;
+		color: #e9f3ff;
+	}
+	.content .list {
+		padding-top: 2em;
+	}
+</style>

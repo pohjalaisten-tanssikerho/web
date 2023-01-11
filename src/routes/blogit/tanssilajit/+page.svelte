@@ -11,12 +11,9 @@
 	räjähdysmäisesti.
 </p>
 <div class="media">
-	<iframe
-		src="https://www.youtube.com/embed/0jP0h3wIZCE"
-		allowfullscreen=""
-		title="YouTube Video"
-	/>
+	<Youtube id="0jP0h3wIZCE" />
 </div>
+
 <h2 id="boogie-woogie">Boogie woogie</h2>
 <p>
 	50-luvulta peräisin oleva boogie woogie on avoimen otteen rock’n’swing-tanssilaji, jota tanssitaan
@@ -27,12 +24,9 @@
 	vähän harvinaisempi lavoilla, mutta erityisen suosittu kilpatanssimaailmassa.
 </p>
 <div class="media">
-	<iframe
-		src="https://www.youtube.com/embed/1y-lQzN2-2I"
-		allowfullscreen=""
-		title="YouTube Video"
-	/>
+	<Youtube id="1y-lQzN2-2I" />
 </div>
+
 <h2 id="bugg">Bugg</h2>
 <p>
 	Ruotsista kotoisin oleva bugg on rock’n’swing-tanssi, jota tanssitaan avoimessa otteessa ja
@@ -42,13 +36,20 @@
 	tanssista mieleisensä. Bugg löytyy aika varmasti joka lavatanssin tanssilistalta ja
 	kilpatanssimaailmasta varsinkin Suomessa ja Ruotsissa.
 </p>
-<div class="media">
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/GcpiJZKgW8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<Youtube id="GcpiJZKgW8s" />
+	<!-- 
+		svelte 
+
+		<Youtube id="GcpiJZKgW8s" /> 
+
+	 vanha youtube embed HUGO
 	<iframe
 		src="https://www.youtube.com/embed/GcpiJZKgW8s"
 		allowfullscreen=""
 		title="YouTube Video"
-	/>
-</div>
+	/> -->
 <h2 id="cha-cha">Cha cha</h2>
 <p>
 	Cha cha on nelijakoinen latinotanssilaji, jota tanssitaan sekä suljetussa tanssiotteessa ilman
@@ -242,3 +243,7 @@ text-align: center;
         border: solid 3px #0b3c5d;
     }
 </style>
+
+<script>
+	import Youtube from "svelte-youtube-embed";
+  </script>

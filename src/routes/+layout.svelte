@@ -177,10 +177,8 @@
   main {
     padding-bottom: 1.7em;
     * {
-      /* width: 640px; */
       width: min(100% - 2rem, 640px);
       margin: 0 auto;
-
     }
     p {
       margin-top: .2em;

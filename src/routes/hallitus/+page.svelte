@@ -1,34 +1,24 @@
+<script lang="ts">
+  import type { PageData } from './$types'
+  export let data: PageData
+  const { boards }: PageData = data
+  const imgPrefexUrl: string = '/img/board/'
+</script>
+
 <h1 id="hallituksen-jäsenet">Hallituksen jäsenet</h1>
+
 <div class="board">
-	<div class="item">
-		<div class="hidden-description"><img src="/img/board/lasse-vaskelainen.jpg" /></div>
-		<div class="fill" />
-		<div class="center"><span class="role">puheenjohtaja</span></div>
-		<div class="center"><span class="name">Lasse Vaskelainen</span></div>
-		<div class="center"><div class="email">etunimi.sukunimi@gmail.com</div></div>
-	</div>
-	<div class="item">
-		<div class="hidden-description"><img src="/img/board/greatman-lim.jpg" /></div>
-		<div class="fill" />
-		<div class="center"><span class="role">varapuheenjohtaja</span></div>
-		<div class="center"><span class="name">Greatman Lim</span></div>
-		<div class="center"><div class="email">sukunimi.etunimi@gmail.org</div></div>
-	</div>
-	<div class="item">
-		<div class="hidden-description"><img src="/img/board/suvi-maenpaa.jpg" /></div>
-		<div class="fill" />
-		<div class="center"><span class="role">taloudenhoitaja</span></div>
-		<div class="center"><span class="name">Suvi Mäenpää</span></div>
-		<div class="center"><div class="email">zukkasd (ät) gmail . com</div></div>
-	</div>
-	<div class="item">
-		<div class="hidden-description"><img src="/img/board/anni-seilo.jpg" /></div>
-		<div class="fill" />
-		<div class="center"><span class="role">sihteeri</span></div>
-		<div class="center"><span class="name">Anni Seilo</span></div>
-		<div class="center"><div class="email">etu.suku@outlook.com</div></div>
-	</div>
+  {#each boards as board }
+    <div class="item">
+      <img src="{ imgPrefexUrl }{ board.picture }" alt="{ board.firstname } { board.lastname }">
+      <div class="role">{ board.role }</div>
+      <div class="name">{ board.firstname } { board.lastname }</div>
+      <div class="line"></div>
+      <div class="email">{ board.email }</div>
+    </div>
+  {/each}
 </div>
+
 <h1 id="järjestötoiminta">Järjestötoiminta</h1>
 <p>
 	Pohjalaisten tanssikerho toimii täysin vapaaehtoisvoimin. Palvelun on siis tuottanut tanssikerhon
@@ -83,50 +73,46 @@
 </p>
 <p>Töölönkatu 3 A, 00940 Helsinki, 5krs.</p>
 
-<style>
-	.board {
-		display: grid;
-		grid-template-columns: repeat(4, auto);
-		grid-template-rows: repeat(2);
-		justify-items: center;
-		max-width: 1030px;
-		margin: 18px auto;
-		grid-row-gap: 2em;
-		margin-bottom: 26px;
-	}
-	.board .item {
-		position: relative;
-		background-color: #022140;
-		border-radius: 2px;
-		border: 2px solid #0b3c5d;
-		width: 214px;
-		margin-top: 0;
-	}
-	.board .item .hidden-description img {
-		position: absolute;
-		outline: 2px solid #0b3c5d;
-		outline-offset: -2px;
-		border-bottom: 3px solid #0b3c5d;
-		width: 214px;
-		height: 220px;
-	}
-	.board .item .fill {
-		height: 225px;
-	}
-	.board .item .center {
-		text-align: left;
-	}
-	.board .item .center .role {
-		font-size: 12px;
-	}
-
-	.board .item .center .name {
-		font-size: 16px;
-		font-weight: 700;
-		border-bottom: 2px solid #0b3c5d;
-	}
-	.board .item .email {
-		font-size: 14px;
-		padding: 10px 8px;
-	}
+<style lang="scss">
+  .board {
+    --border: 2px solid var(--color-gray-blue);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4em;
+    width: min(100% - 2rem, 1080px);
+    .item {
+      background-color: var(--color-night-blue);
+      border-radius: 2px;
+      border: var(--border);
+      width: 228px;
+      img {
+        width: 224px;
+        height: 233px;
+        border-bottom: var(--border);
+      }
+    }
+    .role, .email {
+      font-size: .85em;
+    }
+    .role {
+      padding-top: .35em;
+    }
+    .email{
+      padding-top: .7em;
+      padding-bottom: 1em;
+    }
+    .name {
+      font-size: 1.1em;
+      font-weight: bold;
+      padding-top: .15em;
+    }
+    .role, .email, .name {
+      text-align: center;
+    }
+    .line {
+      height: 2px;
+      width: 33%;
+      background-color: var(--color-gray-blue);
+    }
+  }
 </style>

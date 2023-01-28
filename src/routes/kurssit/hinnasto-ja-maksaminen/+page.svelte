@@ -1,9 +1,11 @@
 <h1 id="hinnasto-ja-maksaminen">Hinnasto ja maksaminen</h1>
 <p>Maksu tapahtuu tilisiirrolla tilille:</p>
-<pre><code
-		>Holvi FI51 7997 7998 0564 23
+<pre>
+  <code>
+    Holvi FI51 7997 7998 0564 23
     BIC HOLVFIHH
-    </code></pre>
+  </code>
+</pre>
 <p>Muista käyttää viitettä!</p>
 <h2 id="kausikurssien-hinnasto">Kausikurssien hinnasto</h2>
 <table class="price-table">

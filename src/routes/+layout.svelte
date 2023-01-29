@@ -188,12 +188,13 @@
     a {
       color: var(--color-bright-blue);
       text-shadow: 2px 2px var(--color-gray-blue);
+      font-size: .95em;
     }
     strong {
       color: var(--color-orange);
+      font-size: .95em;
     }
     pre {
-      /* padding: 1.1em 1em; */
       margin-bottom: 1em;
       border: dotted 1px #A9A9A9;
       background-color: rgba(0,0,0,.47);
@@ -207,11 +208,9 @@
     ul li:after {
       position: absolute;
       content: "";
-      /* background-color: var(--color-orange); */
       background-color: var(--color-orange);
       width: .65em;
       height: .65em;
-      /* top: 50%; */
       left: 0;
       transform: translateY(.5em) scaleX(0.7) rotate(45deg);
     }
@@ -225,7 +224,11 @@
     }
     h1 {
       width: unset;
-      padding-bottom: .8em;
+      padding-bottom: .3em;
+    }
+    h2 {
+      font-size: 1.8em;
+      text-decoration: underline 3px var(--color-orange);
     }
     .jumbotron, .sections {
       width: unset;
@@ -313,7 +316,7 @@
       }
     }
   }
-  // navigation min-width
+  /* navigation min-width */
   @media only screen and (max-width: 579px) {
     div.headers {
       nav.header-left {

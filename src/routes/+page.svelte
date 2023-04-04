@@ -1,3 +1,20 @@
+<script lang="ts">
+  import { PageData } from './$types'
+  export let data: PageData
+  let {coursesContainer}:PageData = data
+
+  async function init() {
+    await loadCourses();
+    const courseTable = document.getElementById('courses-container').firstChild;
+    coursesContainer.innerHTML = '';
+    coursesContainer.appendChild(courseTable);
+  }
+
+  $: if (coursesLoaded) {
+    init();
+  }
+</script>
+
 <div class="jumbotron">
   <h1>Pohjalaisten tanssikerho</h1>
   <em>Opetusta, bileitä ja ekskursioita. Pohjalaisten tanssikerho tuo opiskelijan elämään tanssin iloa.</em>
@@ -5,8 +22,9 @@
     <section>
       <h2>Tiedotteet</h2>
     </section>
-    <section>
+    <section class="course-section">
       <h2>Seuraavat kurssit</h2>
+      <div bind:this={coursesContainer}></div>
     </section>
     <section>
       <h2>Tapahtumat</h2>

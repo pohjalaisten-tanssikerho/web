@@ -2,8 +2,10 @@
   import { onMount } from 'svelte';
   import { loadCourses } from './page';
 
-  onMount(() => {
-    loadCourses();
+  let courses = [];
+
+  onMount(async () => {
+    courses = await loadCourses();
   });
 </script>
 <div class="jumbotron">
@@ -14,9 +16,35 @@
       <h2>Tiedotteet</h2>
     </section>
     <section>
-      <h2>Seuraavat kurssit</h2>
-      <div id="courses-container"></div>
-    </section>
+      <section>
+        <h2>Seuraavat kurssit</h2>
+        <div id="courses-container">
+          {#if courses.length > 0}
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  {#each courses.slice(0, 3) as course}
+                    <th>{course.date.format('ddd, MMM D, YYYY h:mm A')}</th>
+                  {/each}
+                </tr>
+              </thead>
+              <tbody>
+                {#each ['Alkeet', 'AlkeisJatko', 'Jatko'] as courseType}
+                  <tr>
+                    <th>{courseType}</th>
+                    {#each courses.slice(0, 3) as course}
+                      <td>{course[courseType.toLowerCase()]}</td>
+                    {/each}
+                  </tr>
+                {/each}
+              </tbody>
+            </table>
+          {:else}
+            <p>Loading...</p>
+          {/if}
+        </div>
+      </section>
     <section>
       <h2>Tapahtumat</h2>
     </section>

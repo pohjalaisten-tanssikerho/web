@@ -1,3 +1,4 @@
+import type * as Kit from '@sveltejs/kit';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
@@ -7,20 +8,36 @@ dayjs.extend(timezone);
 
 const timezoneName = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-export interface Course {
-  date: dayjs.Dayjs;
-  alkeet: string;
-  alkeisJatko: string;
-  jatko: string;
-}
+type Expand<T> = T extends infer O ? { [K in keyof O]: O[K] } : never;
+type RouteParams = {  }
+type MaybeWithVoid<T> = {} extends T ? T | void : T;
+export type RequiredKeys<T> = { [K in keyof T]-?: {} extends { [P in K]: T[K] } ? never : K; }[keyof T];
+type OutputDataShape<T> = MaybeWithVoid<Omit<App.PageData, RequiredKeys<T>> & Partial<Pick<App.PageData, keyof T & keyof App.PageData>> & Record<string, any>>
+type EnsureDefined<T> = T extends null | undefined ? {} : T;
+type PageParentData = EnsureDefined<LayoutData>;
+type LayoutParams = RouteParams & {  }
+type LayoutParentData = EnsureDefined<{}>;
 
-export async function loadCourses(): Promise<Course[]> {
+export type PageServerData = null;
+export type PageData = Expand<PageParentData>;
+
+export type LayoutServerData = null;
+export type LayoutData = Expand<LayoutParentData>;
+
+async function loadCourses(): Promise<{ courses: any[] }> {
+  // Load course data
   const courseData = await fetch('https://raw.githubusercontent.com/pohjalaisten-tanssikerho/web-page/master/data/courses.json').then(res => res.json());
 
-  const courses = courseData.courses.map((course: any) => {
-    const date = dayjs.utc(course.date).tz(timezoneName);
-    return { date, alkeet: course.alkeet, alkeisJatko: course.alkeis_jatko, jatko: course.jatko };
-  }).filter((course: Course) => course.date.isAfter(dayjs()));
+  // Filter courses that are in the future
+  const courses = courseData.courses.filter((course) => dayjs.utc(course.date).tz(timezoneName).isAfter(dayjs()));
+  return { courses };
+}
 
-  return courses;
+export async function load(page: Kit.LoadPage): Promise<OutputDataShape<typeof page>> {
+  const courses = await loadCourses();
+
+  return {
+    page,
+    courses,
+  };
 }

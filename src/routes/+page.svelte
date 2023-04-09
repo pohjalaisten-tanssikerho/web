@@ -1,11 +1,23 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { loadCourses } from './page';
+  import dayjs from 'dayjs';
+  import utc from 'dayjs/plugin/utc';
+  import timezone from 'dayjs/plugin/timezone';
 
-  let courses = [];
+  dayjs.extend(utc);
+  dayjs.extend(timezone);
 
-  onMount(async () => {
-    courses = await loadCourses();
+  const timezoneName = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  let courses: any[] = [];
+
+  async function loadCourses() {
+    // Load course data
+    const courseData = await fetch('https://raw.githubusercontent.com/pohjalaisten-tanssikerho/web-page/master/data/courses.json').then(res => res.json());
+    courses = courseData.courses.filter((course) => dayjs.utc(course.date).tz(timezoneName).isAfter(dayjs()));
+}
+
+  onMount(() => {
+    loadCourses();
   });
 </script>
 <div class="jumbotron">
@@ -16,35 +28,32 @@
       <h2>Tiedotteet</h2>
     </section>
     <section>
-      <section>
-        <h2>Seuraavat kurssit</h2>
-        <div id="courses-container">
-          {#if courses.length > 0}
-            <table>
-              <thead>
-                <tr>
-                  <th></th>
-                  {#each courses.slice(0, 3) as course}
-                    <th>{course.date.format('ddd, MMM D, YYYY h:mm A')}</th>
-                  {/each}
-                </tr>
-              </thead>
-              <tbody>
-                {#each ['Alkeet', 'AlkeisJatko', 'Jatko'] as courseType}
-                  <tr>
-                    <th>{courseType}</th>
-                    {#each courses.slice(0, 3) as course}
-                      <td>{course[courseType.toLowerCase()]}</td>
-                    {/each}
-                  </tr>
+      <h2>Seuraavat kurssit</h2>
+      {#if courses.length > 0}
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              {#each courses.slice(0, 3) as course}
+                <th>{dayjs.utc(course.date).tz(timezoneName).format('ddd, MMM D, YYYY h:mm A')}</th>
+              {/each}
+            </tr>
+          </thead>
+          <tbody>
+            {#each ['alkeet', 'alkeisJatko', 'jatko'] as courseType}
+              <tr>
+                <th>{courseType}</th>
+                {#each courses.slice(0, 3) as course}
+                  <td>{course[courseType.toLowerCase()]}</td>
                 {/each}
-              </tbody>
-            </table>
-          {:else}
-            <p>Loading...</p>
-          {/if}
-        </div>
-      </section>
+              </tr>
+            {/each}
+          </tbody>
+        </table>
+      {:else}
+        <p>Loading...</p>
+      {/if}
+    </section>
     <section>
       <h2>Tapahtumat</h2>
     </section>

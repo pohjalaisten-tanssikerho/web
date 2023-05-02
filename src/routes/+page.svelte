@@ -104,14 +104,6 @@
 <p>Tanssikerho suosittelee kaikkia tanssikerhon jäseniä liittymään osakuntiin! Mukavan opiskelijaelämän lisäksi osakunta tarjoaa opiskelijoille monia opiskelijaetuuksia. Osakuntalaiselle (VN, PPO, EPO) opiskelijalle tanssikerho tarjoaa kursseja alennettuun hintaan.</p>
 
 <style lang="scss">
-  body {
-    font-family: noto sans,noto sans jp,meiryo,sans-serif;
-  }
-  h1,h2,h3,h4 {
-    text-decoration: underline;
-    text-decoration-color: #0b3c5d;
-    text-decoration-thickness: 3px;
-  }
   .jumbotron {
     background-image: url(/img/picture/hanne-ilmari.jpg);
     background-size: cover;

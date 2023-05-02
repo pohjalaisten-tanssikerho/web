@@ -7,8 +7,9 @@
   dayjs.extend(utc);
   dayjs.extend(timezone);
 
-  const timezoneName = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const timezoneName = 'Europe/Helsinki';
   let courses: any[] = [];
+  let pastCourses: any[] = []
 
   async function loadCourses() {
     // Load course data
@@ -35,12 +36,12 @@
             <tr>
               <th></th>
               {#each courses.slice(0, 3) as course}
-                <th>{dayjs.utc(course.date).tz(timezoneName).format('ddd, MMM D, YYYY h:mm A')}</th>
+                <th>{dayjs.utc(course.date).tz(timezoneName).format('ddd, MMM D, YYYY')}</th>
               {/each}
             </tr>
           </thead>
           <tbody>
-            {#each ['alkeet', 'alkeisJatko', 'jatko'] as courseType}
+            {#each ['alkeet', 'alkeisjatko', 'jatko'] as courseType}
               <tr>
                 <th>{courseType}</th>
                 {#each courses.slice(0, 3) as course}
@@ -50,8 +51,9 @@
             {/each}
           </tbody>
         </table>
+        <p>Kurssit ovat ajantasalla.</p>
       {:else}
-        <p>Seuraavat kurssit päivitetään pian.</p>
+      <p>Viikottaiset kurssit ovat loppu tältä erää. Ensi kaudella taas lisää!</p>
       {/if}
     </section>
     <section>
@@ -102,6 +104,14 @@
 <p>Tanssikerho suosittelee kaikkia tanssikerhon jäseniä liittymään osakuntiin! Mukavan opiskelijaelämän lisäksi osakunta tarjoaa opiskelijoille monia opiskelijaetuuksia. Osakuntalaiselle (VN, PPO, EPO) opiskelijalle tanssikerho tarjoaa kursseja alennettuun hintaan.</p>
 
 <style lang="scss">
+  body {
+    font-family: noto sans,noto sans jp,meiryo,sans-serif;
+  }
+  h1,h2,h3,h4 {
+    text-decoration: underline;
+    text-decoration-color: #0b3c5d;
+    text-decoration-thickness: 3px;
+  }
   .jumbotron {
     background-image: url(/img/picture/hanne-ilmari.jpg);
     background-size: cover;
@@ -113,6 +123,15 @@
       text-decoration-thickness: 5px;
       text-decoration-color: orange;
       padding-top: 1em;
+    }
+    & h2 {
+      max-width: 776px;
+    }
+    & p {
+      max-width: 776px;
+      font-size: 15px;
+      line-height: 1.6em;
+      color: #e9f3ff;
     }
     & em {
       display: block;
@@ -142,6 +161,10 @@
           opacity: 70%;
           border-radius: 4px;
         }
+      }
+      & .date {
+        white-space: nowrap;
+        overflow-x: scroll ;
       }
     }
   }

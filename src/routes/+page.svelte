@@ -51,7 +51,7 @@
           </tbody>
         </table>
       {:else}
-        <p>Loading...</p>
+        <p>Seuraavat kurssit päivitetään pian.</p>
       {/if}
     </section>
     <section>

@@ -31,17 +31,6 @@
           </li>
           <li>
             <a href="/kurssit/jatkokurssi">Jatkokurssi</a>
-          </li>
-             <!-- foobar? tarvitseeko muuttaa t. hannu
-              <a href="/foobar">Alkeiskurssi</a> 
-            </li>
-            <li>
-              <a href="/foobar">Alkeisjatko</a>
-            </li>
-            <li>
-              <a href="/foobar">Jatkokurssi</a>
-            </li>
-          -->
           </ol>
         </div>
       </span>

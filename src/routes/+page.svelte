@@ -62,6 +62,26 @@
   </div>
 </div>
 <h1>Paritanssin huumaa opiskelijoille</h1>
+<section>
+  <div class="container">
+    <div class="text">
+      <p>Paritanssi on hauska, sosiaalinen ja liikunnallinen harrastus, jossa viihtyy jokainen. Tanssi on aina ollut osa kulttuuria ja historiaa, ja täten myös sivistystä. Jokainen törmää paritansseihin viimeistään elämänsä kohokohdissa, joista tunnetuimmat lienevät häiden valssit ja lukion vanhojen tanssit. Kansantanssijoihinkin saattaa törmätä Helsingin keskustassa ja välimeren lomakohteilla salsa on tuttu näky. Tanssiharrastus on erinomainen harrastus, koska siinä yhdistyy monia asioita mielenkiintoiseksi kokonaisuudeksi. Paritanssissa musiikki ja liike kietoutuvat yhteen samalla, kun kokemus jaetaan tanssiparin kanssa. Laji ja musiikki luovat tunnetilan: tangossa on draamaa, fuskussa leikillisyyttä, buggissa vauhtia, valssissa arvokkuutta, bachatassa herkkyyttä ja sensuaalisuutta jne. Varmasti jokaiselle löytyy oma suosikki!</p>
+    </div>
+    <div class="image">
+      <img src="/img/picture/desktop/annika-juuso.jpg" alt="annikajuuso">
+    </div>
+    <div class="text">
+      <p>Suomalainen lavatanssi on erittäin lajirikas. Saman illan aikana voi olla helpostikin kymmenen eri lajia. Lajien moninaisuus on rikkautta ja se tuo tanssiin mielenkiintoa sekä tunnetilojen vaihtelevuutta. Pohjalaisten tanssikerho opettaa kaikkia yleisimpiä tanssilajeja, joita suomalaisilla lavoilla tanssitaan. Tanssikerhossa opettavat ammattiopettajat monien vuosien kokemuksella. Opettajat ja Pohjalaisten tanssikerhon lämminhenkinen yhteisö auttavat ja ovat tukena tanssikulttuuriin tutustumisessa.
+
+        Pohjalaisten tanssikerho järjestää opiskelijoille ja opiskelijamielisille lukukauden pituisia paritanssikursseja, joissa opetus tapahtuu viikottain. Näiden lisäksi kerho järjestää ekskursioita, tanssibileitä ja tiiviskursseja.
+        
+        Tervetuloa iloiseen joukkoomme! Nähdään tanssilattialla!</p>
+    </div>
+    <div class="image">
+      <img src="/img/picture/desktop/minttu-ilmari.jpg" alt="minttuilmari">
+    </div>
+  </div>
+</section>
 <h1>Tanssin opettajat</h1>
 <div class="teachers">
   <div>
@@ -159,6 +179,44 @@
         overflow-x: scroll ;
       }
     }
+//code for container annikajuuso //
+    .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.image {
+  flex-basis: 100%;
+  margin-bottom: 10px;
+}
+.image img {
+  max-width: 100%;
+}
+.text {
+  flex-basis: 100%;
+  text-align: justify;
+}
+.text h2 {
+  margin-top: 0;
+}
+
+@media (min-width: 769px) {
+  .container {
+    flex-direction: column;
+  }
+  .image {
+    order: 2;
+  }
+  .text {
+    order: 1;
+    margin-bottom: 20px;
+  }
+}
+//code//
   }
   .teachers {
     display: flex;

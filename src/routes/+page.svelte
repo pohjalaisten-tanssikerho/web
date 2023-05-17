@@ -62,14 +62,18 @@
   </div>
 </div>
 <h1>Paritanssin huumaa opiskelijoille</h1>
+
 <section>
-  <div class="container">
+  <div class="container-opiskelijat">
+    <div class="content-annikajuuso">
     <div class="text">
-      <p>Paritanssi on hauska, sosiaalinen ja liikunnallinen harrastus, jossa viihtyy jokainen. Tanssi on aina ollut osa kulttuuria ja historiaa, ja täten myös sivistystä. Jokainen törmää paritansseihin viimeistään elämänsä kohokohdissa, joista tunnetuimmat lienevät häiden valssit ja lukion vanhojen tanssit. Kansantanssijoihinkin saattaa törmätä Helsingin keskustassa ja välimeren lomakohteilla salsa on tuttu näky. Tanssiharrastus on erinomainen harrastus, koska siinä yhdistyy monia asioita mielenkiintoiseksi kokonaisuudeksi. Paritanssissa musiikki ja liike kietoutuvat yhteen samalla, kun kokemus jaetaan tanssiparin kanssa. Laji ja musiikki luovat tunnetilan: tangossa on draamaa, fuskussa leikillisyyttä, buggissa vauhtia, valssissa arvokkuutta, bachatassa herkkyyttä ja sensuaalisuutta jne. Varmasti jokaiselle löytyy oma suosikki!</p>
+        <p>Paritanssi on hauska, sosiaalinen ja liikunnallinen harrastus, jossa viihtyy jokainen. Tanssi on aina ollut osa kulttuuria ja historiaa, ja täten myös sivistystä. Jokainen törmää paritansseihin viimeistään elämänsä kohokohdissa, joista tunnetuimmat lienevät häiden valssit ja lukion vanhojen tanssit. Kansantanssijoihinkin saattaa törmätä Helsingin keskustassa ja välimeren lomakohteilla salsa on tuttu näky. Tanssiharrastus on erinomainen harrastus, koska siinä yhdistyy monia asioita mielenkiintoiseksi kokonaisuudeksi. Paritanssissa musiikki ja liike kietoutuvat yhteen samalla, kun kokemus jaetaan tanssiparin kanssa. Laji ja musiikki luovat tunnetilan: tangossa on draamaa, fuskussa leikillisyyttä, buggissa vauhtia, valssissa arvokkuutta, bachatassa herkkyyttä ja sensuaalisuutta jne. Varmasti jokaiselle löytyy oma suosikki!</p>
     </div>
-    <div class="image">
+    <div class="image-annikajuuso">
       <img src="/img/picture/desktop/annika-juuso.jpg" alt="annikajuuso">
     </div>
+      </div>
+      <div class="content-minttuilmari">
     <div class="text">
       <p>Suomalainen lavatanssi on erittäin lajirikas. Saman illan aikana voi olla helpostikin kymmenen eri lajia. Lajien moninaisuus on rikkautta ja se tuo tanssiin mielenkiintoa sekä tunnetilojen vaihtelevuutta. Pohjalaisten tanssikerho opettaa kaikkia yleisimpiä tanssilajeja, joita suomalaisilla lavoilla tanssitaan. Tanssikerhossa opettavat ammattiopettajat monien vuosien kokemuksella. Opettajat ja Pohjalaisten tanssikerhon lämminhenkinen yhteisö auttavat ja ovat tukena tanssikulttuuriin tutustumisessa.
 
@@ -77,11 +81,13 @@
         
         Tervetuloa iloiseen joukkoomme! Nähdään tanssilattialla!</p>
     </div>
-    <div class="image">
+    <div class="image-minttu-ilmari">
       <img src="/img/picture/desktop/minttu-ilmari.jpg" alt="minttuilmari">
     </div>
+      </div>
   </div>
 </section>
+
 <h1>Tanssin opettajat</h1>
 <div class="teachers">
   <div>
@@ -180,42 +186,58 @@
       }
     }
 //code for container annikajuuso //
-    .container {
+.container-opiskelijat {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  padding: 20px;
-  box-sizing: border-box;
 }
-.image {
-  flex-basis: 100%;
-  margin-bottom: 10px;
+
+.content-annikajuuso,
+.content-minttuilmari {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
 }
-.image img {
-  max-width: 100%;
+
+.image-annikajuuso {
+  width: 560px;
+  height: 560px;
+  margin-right: 10px;
+}
+.image-minttuilmari {
+  width: 560px;
+  height: 317px;
+  margin-right: 10px;
 }
 .text {
-  flex-basis: 100%;
-  text-align: justify;
-}
-.text h2 {
-  margin-top: 0;
+  flex: 1;
+  margin-right: 10px;
 }
 
 @media (min-width: 769px) {
-  .container {
-    flex-direction: column;
+  .container-opiskelijat {
+    flex-direction: row;
+    align-items: flex-start; /* Add this line to align items to the top */
   }
-  .image {
-    order: 2;
+
+  .content-annikajuuso,
+  .content-minttuilmari {
+    flex-basis: 50%; /* Change flex-basis to 50% for equal width */
+    margin-bottom: 0;
   }
-  .text {
-    order: 1;
-    margin-bottom: 20px;
+
+  .image-annikajuuso,
+  .image-minttuilmari {
+    width: 100%; /* Set the width to 100% for responsiveness */
+    height: auto; /* Set height to auto to maintain aspect ratio */
+    margin-right: 0; /* Remove margin-right */
   }
+
 }
+
 //code//
   }
   .teachers {

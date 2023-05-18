@@ -74,6 +74,8 @@
       <img src="/img/picture/desktop/annika-juuso.jpg" alt="annikajuuso">
     </div>
       </div>
+</section>
+<section>
       <div class="content-minttuilmari">
     <div class="text2">
       <p>Suomalainen lavatanssi on erittäin lajirikas. Saman illan aikana voi olla helpostikin kymmenen eri lajia. Lajien moninaisuus on rikkautta ja se tuo tanssiin mielenkiintoa sekä tunnetilojen vaihtelevuutta. Pohjalaisten tanssikerho opettaa kaikkia yleisimpiä tanssilajeja, joita suomalaisilla lavoilla tanssitaan. Tanssikerhossa opettavat ammattiopettajat monien vuosien kokemuksella. Opettajat ja Pohjalaisten tanssikerhon lämminhenkinen yhteisö auttavat ja ovat tukena tanssikulttuuriin tutustumisessa.</p>
@@ -86,7 +88,6 @@
       <img src="/img/picture/desktop/minttu-ilmari.jpg" alt="minttuilmari">
     </div>
       </div>
-  </div>
 </section>
 
 <h1>Tanssin opettajat</h1>
@@ -183,11 +184,15 @@
       }
     }
 }
-//code 
+// code
+section {
+  width: 752px;
+  height: 609px;
+}
 .container-opiskelijat {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .content-annikajuuso,
@@ -196,37 +201,28 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
-}
-
-.text1 {
-  height: 605px;
   width: 373px;
-  margin-right: 20px;
+  height: 603px;
+}
+.content-minttuilmari {
+  flex-direction: row-reverse;
+}
+.text1,
+.text2 {
+  height: 605px;
+  width: 605px;
+  margin-bottom: 20px;
+  border-right: 2px solid #0b3c5d;
 }
 
 .image-annikajuuso img,
 .image-minttu-ilmari img {
-  max-width: fit-content; 
-  height: 605px; 
+  max-width: fit-content;
+  height: 605px;
 }
 
-@media (max-width: 768px) {
-  .container-opiskelijat {
-    flex-direction: column;
-  }
+//code
 
-  .content-annikajuuso,
-  .content-minttuilmari {
-    flex-direction: column;
-  }
-
-  .text2 {
-    width: 10px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-  }
-}
-  //code
   .teachers {
     display: flex;
     flex-wrap: wrap;

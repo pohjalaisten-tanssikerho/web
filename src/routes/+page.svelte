@@ -184,7 +184,8 @@
       }
     }
 }
-// code
+
+
 section {
   width: 752px;
   height: 609px;
@@ -223,8 +224,6 @@ section {
   max-width: fit-content;
   height: 605px;
 }
-
-//code
 
   .teachers {
     display: flex;

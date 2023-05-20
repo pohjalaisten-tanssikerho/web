@@ -200,9 +200,12 @@ section {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 20px;
-  width: 373px;
   height: 603px;
+    width: 748px;
+    margin: 0 auto;
+    border: 2px solid #0b3c5d;
+    border-radius: 4px;
+    margin-bottom:36px
 }
 .content-minttuilmari {
   flex-direction: row-reverse;

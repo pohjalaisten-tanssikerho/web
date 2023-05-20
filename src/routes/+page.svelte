@@ -171,6 +171,7 @@
         border-radius: 6px;
         backdrop-filter: blur(6px);
         background: #022140AF;
+        
         &::before {
           content: '';
           position: absolute;

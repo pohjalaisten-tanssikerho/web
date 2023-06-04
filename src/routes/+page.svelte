@@ -14,8 +14,8 @@
   async function loadCourses() {
     // Load course data
     const courseData = await fetch('https://raw.githubusercontent.com/pohjalaisten-tanssikerho/web-page/master/data/courses.json').then(res => res.json());
-    courses = courseData.courses.filter((course) => dayjs.utc(course.date).tz(timezoneName).isAfter(dayjs()));
-}
+    courses = courseData.courses.filter((course: any) => dayjs.utc(course.date).tz(timezoneName).isAfter(dayjs()));
+  }
 
   onMount(() => {
     loadCourses();

@@ -67,3 +67,40 @@
 	alennettuun hintaan.
 </div>
 <div class="footnote">** Myös jatko-opiskelijat.</div>
+
+<style lang="scss">
+  %table-data {
+    color: var(--color-white);
+    border-collapse: collapse;
+    border-style: hidden;
+    tr {
+      text-align: center;
+      th { 
+        height: 30px;
+        border: 2px solid #d0d0d0;
+        padding: 4px;
+        font-weight: normal;
+        font-size: 14px;
+      }
+      td { 
+        height: 30px;
+        border: 2px solid #d0d0d0;
+        padding: 4px;
+        font-weight: normal;
+        font-size: 14px;
+      }
+      .dark-background {
+        // background-color: $opacity-half;
+      }
+    }
+    .date {
+      text-align: right;
+    }
+  }
+  .price-table {
+    @extend %table-data;
+    th:not(:first-child) {
+    min-width: 100px;
+    }
+  }
+</style>

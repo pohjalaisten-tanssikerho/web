@@ -23,14 +23,10 @@
           </ol>
           <h4>Kurssit</h4>
           <ol>
-            <li> 
-              <a href="/kurssit/alkeiskurssi">Alkeiskurssi</a>
-            </li>
-            <li>
-            <a href="/kurssit/alkeisjatko">Alkeisjatko</a>
-          </li>
-          <li>
-            <a href="/kurssit/jatkokurssi">Jatkokurssi</a>
+            <li><a href="/kurssi/kausi/alkeetOma">Alkeiskurssi oman parin kanssa</a></li>
+            <li><a href="/kurssi/kausi/alkeet">Alkeiskurssi parin vaihdolla</a></li>
+            <li><a href="/kurssi/kausi/alkeisjatko">Alkeisjatko</a></li>
+            <li><a href="/kurssi/kausi/jatko">Jatkokurssi</a></li>
           </ol>
         </div>
       </span>

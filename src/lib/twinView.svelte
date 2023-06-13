@@ -24,27 +24,44 @@
 </div>
 
 <style lang="scss">
-	.twin-view {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
-		justify-content: center;
-		width: 813px;
-		/* flex-direction: row-reverse; */ /* Tällä voi vaihtaa puolta! */
-	}
-	.items {
-		width: 373px;
-		height: 600px;
-		background-color: var(--color-night-blue);
-		border-radius: 2px;
-		border: var(--border);
-		img {
-			width: 373px;
-		}
-	}
-	/*@media only screen and (max-width: 1080px){
-    .twin-view {
-      flex-direction: column;
-    }
-  }*/
+
+section {
+  width: 752px;
+  height: 609px;
+}
+.container-opiskelijat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.content-annikajuuso,
+.content-minttuilmari {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 603px;
+    width: 748px;
+    margin: 0 auto;
+    border: 2px solid #0b3c5d;
+    border-radius: 4px;
+    margin-bottom:36px
+}
+.content-minttuilmari {
+  flex-direction: row-reverse;
+}
+.text1,
+.text2 {
+  height: 605px;
+  width: 605px;
+  margin-bottom: 20px;
+  border-right: 2px solid #0b3c5d;
+}
+
+.image-annikajuuso img,
+.image-minttu-ilmari img {
+  max-width: fit-content;
+  height: 605px;
+}
+
 </style>

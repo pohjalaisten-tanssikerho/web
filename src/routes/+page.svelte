@@ -63,6 +63,7 @@
   </div>
 </div>
 <h1>Paritanssin huumaa opiskelijoille</h1>
+
 <main>
 	<TwinView><p>Paritanssi on hauska, sosiaalinen ja liikunnallinen harrastus, jossa viihtyy jokainen. Tanssi on aina ollut osa kulttuuria ja historiaa, ja täten myös sivistystä. Jokainen törmää paritansseihin viimeistään elämänsä kohokohdissa, joista tunnetuimmat lienevät häiden valssit ja lukion vanhojen tanssit. Kansantanssijoihinkin saattaa törmätä Helsingin keskustassa ja välimeren lomakohteilla salsa on tuttu näky.</p>
 		<p> Tanssiharrastus on erinomainen harrastus, koska siinä yhdistyy monia asioita mielenkiintoiseksi kokonaisuudeksi. Paritanssissa musiikki ja liike kietoutuvat yhteen samalla, kun kokemus jaetaan tanssiparin kanssa. Laji ja musiikki luovat tunnetilan: tangossa on draamaa, fuskussa leikillisyyttä, buggissa vauhtia, valssissa arvokkuutta, bachatassa herkkyyttä ja sensuaalisuutta jne. Varmasti jokaiselle löytyy oma suosikki!</p>
@@ -74,32 +75,7 @@
 		  Tervetuloa iloiseen joukkoomme! Nähdään tanssilattialla!</p>
 		  <img src="/img/picture/desktop/minttu-ilmari.jpg" alt="minttuilmari">
 		</TwinView>
-	<section>
-	<div class="container-opiskelijat">
-	  <div class="content-annikajuuso">
-	  <div class="text1">
-		  <p>Paritanssi on hauska, sosiaalinen ja liikunnallinen harrastus, jossa viihtyy jokainen. Tanssi on aina ollut osa kulttuuria ja historiaa, ja täten myös sivistystä. Jokainen törmää paritansseihin viimeistään elämänsä kohokohdissa, joista tunnetuimmat lienevät häiden valssit ja lukion vanhojen tanssit. Kansantanssijoihinkin saattaa törmätä Helsingin keskustassa ja välimeren lomakohteilla salsa on tuttu näky.</p>
-		  <p> Tanssiharrastus on erinomainen harrastus, koska siinä yhdistyy monia asioita mielenkiintoiseksi kokonaisuudeksi. Paritanssissa musiikki ja liike kietoutuvat yhteen samalla, kun kokemus jaetaan tanssiparin kanssa. Laji ja musiikki luovat tunnetilan: tangossa on draamaa, fuskussa leikillisyyttä, buggissa vauhtia, valssissa arvokkuutta, bachatassa herkkyyttä ja sensuaalisuutta jne. Varmasti jokaiselle löytyy oma suosikki!</p>
-	  </div>
-	  <div class="image-annikajuuso">
-		<img src="/img/picture/desktop/annika-juuso.jpg" alt="annikajuuso">
-	  </div>
-		</div>
-  </section>
-  <section>
-		<div class="content-minttuilmari">
-	  <div class="text2">
-		<p>Suomalainen lavatanssi on erittäin lajirikas. Saman illan aikana voi olla helpostikin kymmenen eri lajia. Lajien moninaisuus on rikkautta ja se tuo tanssiin mielenkiintoa sekä tunnetilojen vaihtelevuutta. Pohjalaisten tanssikerho opettaa kaikkia yleisimpiä tanssilajeja, joita suomalaisilla lavoilla tanssitaan. Tanssikerhossa opettavat ammattiopettajat monien vuosien kokemuksella. Opettajat ja Pohjalaisten tanssikerhon lämminhenkinen yhteisö auttavat ja ovat tukena tanssikulttuuriin tutustumisessa.</p>
-  
-		<p>Pohjalaisten tanssikerho järjestää opiskelijoille ja opiskelijamielisille lukukauden pituisia paritanssikursseja, joissa opetus tapahtuu viikottain. Näiden lisäksi kerho järjestää ekskursioita, tanssibileitä ja tiiviskursseja.
-		  
-		  Tervetuloa iloiseen joukkoomme! Nähdään tanssilattialla!</p>
-	  </div>
-	  <div class="image-minttu-ilmari">
-		<img src="/img/picture/desktop/minttu-ilmari.jpg" alt="minttuilmari">
-	  </div>
-		</div>
-  </section></main>
+	</main>
 
 
 <h1>Tanssin opettajat</h1>
@@ -196,46 +172,6 @@
         }
       }
     }
-}
-
-
-section {
-  width: 752px;
-  height: 609px;
-}
-.container-opiskelijat {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.content-annikajuuso,
-.content-minttuilmari {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 603px;
-    width: 748px;
-    margin: 0 auto;
-    border: 2px solid #0b3c5d;
-    border-radius: 4px;
-    margin-bottom:36px
-}
-.content-minttuilmari {
-  flex-direction: row-reverse;
-}
-.text1,
-.text2 {
-  height: 605px;
-  width: 605px;
-  margin-bottom: 20px;
-  border-right: 2px solid #0b3c5d;
-}
-
-.image-annikajuuso img,
-.image-minttu-ilmari img {
-  max-width: fit-content;
-  height: 605px;
 }
 
   .teachers {

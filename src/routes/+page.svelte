@@ -4,6 +4,11 @@
   import utc from 'dayjs/plugin/utc';
   import timezone from 'dayjs/plugin/timezone';
   import TwinView from '$lib/TwinView.svelte';
+  let imageSrc = 'static/img/picture/desktop/annika-juuso.jpg';
+  let textContent = 'lorem ipsum blaablaa';
+
+  <TwinView {imageSrc} {textContent} />
+
 
   dayjs.extend(utc);
   dayjs.extend(timezone);
@@ -65,16 +70,16 @@
 <h1>Paritanssin huumaa opiskelijoille</h1>
 
 <main>
-	<TwinView><p>Paritanssi on hauska, sosiaalinen ja liikunnallinen harrastus, jossa viihtyy jokainen. Tanssi on aina ollut osa kulttuuria ja historiaa, ja täten myös sivistystä. Jokainen törmää paritansseihin viimeistään elämänsä kohokohdissa, joista tunnetuimmat lienevät häiden valssit ja lukion vanhojen tanssit. Kansantanssijoihinkin saattaa törmätä Helsingin keskustassa ja välimeren lomakohteilla salsa on tuttu näky.</p>
-		<p> Tanssiharrastus on erinomainen harrastus, koska siinä yhdistyy monia asioita mielenkiintoiseksi kokonaisuudeksi. Paritanssissa musiikki ja liike kietoutuvat yhteen samalla, kun kokemus jaetaan tanssiparin kanssa. Laji ja musiikki luovat tunnetilan: tangossa on draamaa, fuskussa leikillisyyttä, buggissa vauhtia, valssissa arvokkuutta, bachatassa herkkyyttä ja sensuaalisuutta jne. Varmasti jokaiselle löytyy oma suosikki!</p>
-		<img src="/img/picture/desktop/annika-juuso.jpg" alt="annikajuuso"></TwinView>
-	<TwinView><p>Suomalainen lavatanssi on erittäin lajirikas. Saman illan aikana voi olla helpostikin kymmenen eri lajia. Lajien moninaisuus on rikkautta ja se tuo tanssiin mielenkiintoa sekä tunnetilojen vaihtelevuutta. Pohjalaisten tanssikerho opettaa kaikkia yleisimpiä tanssilajeja, joita suomalaisilla lavoilla tanssitaan. Tanssikerhossa opettavat ammattiopettajat monien vuosien kokemuksella. Opettajat ja Pohjalaisten tanssikerhon lämminhenkinen yhteisö auttavat ja ovat tukena tanssikulttuuriin tutustumisessa.</p>
-  
-		<p>Pohjalaisten tanssikerho järjestää opiskelijoille ja opiskelijamielisille lukukauden pituisia paritanssikursseja, joissa opetus tapahtuu viikottain. Näiden lisäksi kerho järjestää ekskursioita, tanssibileitä ja tiiviskursseja.
-		  
-		  Tervetuloa iloiseen joukkoomme! Nähdään tanssilattialla!</p>
-		  <img src="/img/picture/desktop/minttu-ilmari.jpg" alt="minttuilmari">
-		</TwinView>
+	<TwinView>
+		<div class="container">
+			<div class="left">
+				<p>{textContent}</p>
+			</div>
+			<div class="right">
+				<img src={imageSrc} alt="annikajuuso"/>
+			</div>
+		</div>
+	</TwinView>
 	</main>
 
 

@@ -1,26 +1,12 @@
 <script lang="ts">
-	//export let imgSrc = '/static/img/picture/mobile/hanne-juuso.jpg';
-	/*import type {Image} from './$types'*/
+	export let imageSrc;
+	export let textContent;
 </script>
 
 <div class="twin-view">
-	<div class="items">
-		<p>
-			Paritanssi on hauska, sosiaalinen ja liikunnallinen harrastus, jossa viihtyy jokainen. Tanssi
-			on aina ollut osa kulttuuria ja historiaa, ja täten myös sivistystä. Jokainen törmää
-			paritansseihin viimeistään elämänsä kohokohdissa, joista tunnetuimmat lienevät häiden valssit
-			ja lukion vanhojen tanssit. Kansantanssijoihinkin saattaa törmätä Helsingin keskustassa ja
-			välimeren lomakohteilla salsa on tuttu näky.
-		</p>
-		<p>
-			Tanssiharrastus on erinomainen harrastus, koska siinä yhdistyy monia asioita
-			mielenkiintoiseksi kokonaisuudeksi. Paritanssissa musiikki ja liike kietoutuvat yhteen
-			samalla, kun kokemus jaetaan tanssiparin kanssa. Laji ja musiikki luovat tunnetilan: tangossa
-			on draamaa, fuskussa leikillisyyttä, buggissa vauhtia, valssissa arvokkuutta, bachatassa
-			herkkyyttä ja sensuaalisuutta jne. Varmasti jokaiselle löytyy oma suosikki!
-		</p>
+	<div class="items1">
 	</div>
-	<div class="items"><img src="../img/picture/mobile/annika-juuso.jpg" alt="Hanne ja Juuso" /></div>
+	<div class="items2"></div>
 </div>
 
 <style lang="scss">
@@ -31,7 +17,7 @@ section {
 }
 .container-opiskelijat {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
 }
 

@@ -3,11 +3,9 @@
   import dayjs from 'dayjs';
   import utc from 'dayjs/plugin/utc';
   import timezone from 'dayjs/plugin/timezone';
-  import TwinView from '$lib/TwinView.svelte';
+  import TwinView from '../lib/TwinView.svelte';
   let imageSrc = 'static/img/picture/desktop/annika-juuso.jpg';
   let textContent = 'lorem ipsum blaablaa';
-
-  <TwinView {imageSrc} {textContent} />
 
 
   dayjs.extend(utc);

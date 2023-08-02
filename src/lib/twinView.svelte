@@ -51,4 +51,18 @@
 	flex: 1;
 }
 
+@media only screen and (max-width: 768px){
+ /*for mobile phones */
+ .twin-view {
+	display: flex;
+	flex-direction: column;
+ }
+}
+
+.twin-view img {
+	height: 398px;
+	width: 398px;
+
+}
+
 </style>

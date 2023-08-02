@@ -28,7 +28,7 @@
 	flex-direction: row;
 	width: 752px;
 	height: 609px;
-	align-items: flex-start;
+	align-items: flex-start;``
 
 }
 

@@ -6,22 +6,13 @@
 
 <div class="twin-view">
 	<div class="content">
-	{#if reverse}
-	  <div class="right">
-		<img src="{imageSrc}" alt="Image" />
-	  </div>
-	  <div class="left">
-		<p>{textContent}</p>
-	  </div>
-	{:else}
-	  <div class="left">
-		<p>{textContent}</p>
-	  </div>
-	  <div class="right">
-		<img src="{imageSrc}" alt="Image" />
-	  </div>
-	{/if}
-  </div>
+		<div class="left">
+			<p>{textContent}</p>
+		</div>
+		<div class="right">
+			<img src="{imageSrc}" alt="Image" />
+		</div>
+	</div>
 </div>
 
 <style lang="scss">
@@ -38,22 +29,19 @@
 }
 
 .left {
-    width: 373px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 16px 0;
-    background: rgba(0, 0, 0, 0.47);
-    overflow: auto;
-    border-right: 2px solid #0b3c5d; /* Add a border to the right side */
+	flex: 1;
+	align-self: stretch;
+	width: 50%;
+	background: rgba(0, 0, 0, 0.47);
+	border-right: 1px solid #0b3c5d;
 }
 
 .right {
-	align-items: stretch;
-    border-left: 2px solid #0b3c5d; /* Add a border to the left side */
+	flex: 1;
+	align-self: stretch;
+	width: 50%;
+	border-left: 1px solid #0b3c5d;
 }
 
 /* Additional styling for text content and images if needed */
 </style>
-

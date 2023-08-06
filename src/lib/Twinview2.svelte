@@ -1,3 +1,4 @@
+<!-- twinview.svelte -->
 <script lang="ts">
 	export let imageSrc;
 	export let textContent;
@@ -5,45 +6,44 @@
 </script>
 
 <div class="twin-view">
-	<div class="content-container">
-		<div class="text-container">
+	<div class="content">
+		<div class="left">
 			<p>{textContent}</p>
 		</div>
-		<div class="image-container">
-			<img src="{imageSrc}" alt=" " />
+		<div class="right">
+			<img src="{imageSrc}" alt="Image" />
 		</div>
 	</div>
 </div>
 
 <style lang="scss">
 .twin-view {
-	border: 2px solid #0b3c5d; /* Add a border to the wrapper */
-	border-radius: 4px;
-	margin: 0 auto;
 	margin-bottom: 36px;
-	overflow: auto;
-	width: 100%;
 }
 
-.content-container {
+.content {
 	display: flex;
-	align-items: stretch;
-	width: 100%;
+	align-items: center;
+	border: 2px solid #0b3c5d;
+	border-radius: 4px;
+	overflow: hidden;
+	margin: 0 auto;
+	width: 748px;
 }
 
-.text-container {
-    align-self: stretch;
+.left {
 	flex: 1;
-	padding: 16px 0;
+	align-self: stretch;
+	width: 50%;
 	background: rgba(0, 0, 0, 0.47);
-	border-right: 2px solid #0b3c5d; /* Add a border to the right side */
-	box-sizing: border-box;
+	border-right: 1px solid #0b3c5d;
 }
 
-.image-container {
-    align-self: stretch;
+.right {
 	flex: 1;
-	box-sizing: border-box;
+	align-self: stretch;
+	width: 50%;
+	border-left: 1px solid #0b3c5d;
 }
 
 /* Additional styling for text content and images if needed */

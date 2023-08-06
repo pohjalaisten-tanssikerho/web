@@ -3,7 +3,7 @@
   import dayjs from 'dayjs';
   import utc from 'dayjs/plugin/utc';
   import timezone from 'dayjs/plugin/timezone';
-  import TwinView from '../lib/TwinView.svelte';
+  import TwinView from '../lib/TwinView2.svelte';
 
 
   dayjs.extend(utc);
@@ -66,7 +66,6 @@
 <h1>Paritanssin huumaa opiskelijoille</h1>
 
 <main>
-  <div class="twin-view-wrapper">
     <TwinView
         textContent="Paritanssi on hauska, sosiaalinen ja liikunnallinen harrastus, jossa viihtyy jokainen. Tanssi on aina ollut osa kulttuuria ja historiaa, ja täten myös sivistystä. Jokainen törmää paritansseihin viimeistään elämänsä kohokohdissa, joista tunnetuimmat lienevät häiden valssit ja lukion vanhojen tanssit. Kansantanssijoihinkin saattaa törmätä Helsingin keskustassa ja välimeren lomakohteilla salsa on tuttu näky.
         Tanssiharrastus on erinomainen harrastus, koska siinä yhdistyy monia asioita mielenkiintoiseksi kokonaisuudeksi. Paritanssissa musiikki ja liike kietoutuvat yhteen samalla, kun kokemus jaetaan tanssiparin kanssa. Laji ja musiikki luovat tunnetilan: tangossa on draamaa, fuskussa leikillisyyttä, buggissa vauhtia, valssissa arvokkuutta, bachatassa herkkyyttä ja sensuaalisuutta jne. Varmasti jokaiselle löytyy oma suosikki!"
@@ -80,7 +79,6 @@
         imageSrc="../img/picture/desktop/minttu-ilmari.jpg"
         reverse={true}
     />
-    </div>
 	</main>
 
 

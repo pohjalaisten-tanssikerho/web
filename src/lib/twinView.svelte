@@ -5,6 +5,7 @@
 </script>
 
 <div class="twin-view">
+	<div class="content">
 	{#if reverse}
 	  <div class="right">
 		<img src="{imageSrc}" alt="Image" />
@@ -21,34 +22,38 @@
 	  </div>
 	{/if}
   </div>
+</div>
 
 <style lang="scss">
 .twin-view {
-	display: flex;
-	flex-direction: row;
-	width: 752px;
-	height: 609px;
-	align-items: flex-start;
-
-}
-
-.left {
-	flex: 1;
-	height: 605px;
-	width: 605px;
-	margin-bottom: 20px;
-	white-space: pre-wrap;
-	font-size: 15px;
-	line-height: 1.6em;
-	color: #e9f3ff;
-	padding: 16px 0;
-	background: rgba(0,0,0,.47);
-	overflow: auto;
 	margin-bottom: 36px;
 }
 
-.right {
-	flex: 1;
+.content {
+	display: flex;
+	align-items: center;
+	border: 2px solid #0b3c5d;
+	border-radius: 4px;
+	overflow: hidden;
 }
 
+.left {
+    width: 373px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px 0;
+    background: rgba(0, 0, 0, 0.47);
+    overflow: auto;
+    border-right: 2px solid #0b3c5d; /* Add a border to the right side */
+}
+
+.right {
+	align-items: stretch;
+    border-left: 2px solid #0b3c5d; /* Add a border to the left side */
+}
+
+/* Additional styling for text content and images if needed */
 </style>
+

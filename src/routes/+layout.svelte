@@ -161,14 +161,11 @@
   }
   main {
     padding-bottom: 1.7em;
-    * {
-      width: min(100% - 2rem, 640px);
-      margin: 0 auto;
-    }
     p {
       margin-top: .2em;
       margin-bottom: .6em;
       font-size: .95em;
+      line-height: 1.6em;
     }
     a {
       color: var(--color-bright-blue);

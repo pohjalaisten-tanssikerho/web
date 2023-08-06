@@ -66,20 +66,21 @@
 <h1>Paritanssin huumaa opiskelijoille</h1>
 
 <main>
-	<TwinView
-textContent="Paritanssi on hauska, sosiaalinen ja liikunnallinen harrastus, jossa viihtyy jokainen. Tanssi on aina ollut osa kulttuuria ja historiaa, ja täten myös sivistystä. Jokainen törmää paritansseihin viimeistään elämänsä kohokohdissa, joista tunnetuimmat lienevät häiden valssit ja lukion vanhojen tanssit. Kansantanssijoihinkin saattaa törmätä Helsingin keskustassa ja välimeren lomakohteilla salsa on tuttu näky.
-
-Tanssiharrastus on erinomainen harrastus, koska siinä yhdistyy monia asioita mielenkiintoiseksi kokonaisuudeksi. Paritanssissa musiikki ja liike kietoutuvat yhteen samalla, kun kokemus jaetaan tanssiparin kanssa. Laji ja musiikki luovat tunnetilan: tangossa on draamaa, fuskussa leikillisyyttä, buggissa vauhtia, valssissa arvokkuutta, bachatassa herkkyyttä ja sensuaalisuutta jne. Varmasti jokaiselle löytyy oma suosikki!"
-imageSrc="../img/picture/desktop/annika-juuso.jpg"/>
-<TwinView
-textContent="Suomalainen lavatanssi on erittäin lajirikas. Saman illan aikana voi olla helpostikin kymmenen eri lajia. Lajien moninaisuus on rikkautta ja se tuo tanssiin mielenkiintoa sekä tunnetilojen vaihtelevuutta. Pohjalaisten tanssikerho opettaa kaikkia yleisimpiä tanssilajeja, joita suomalaisilla lavoilla tanssitaan. Tanssikerhossa opettavat ammattiopettajat monien vuosien kokemuksella. Opettajat ja Pohjalaisten tanssikerhon lämminhenkinen yhteisö auttavat ja ovat tukena tanssikulttuuriin tutustumisessa.
-
-Pohjalaisten tanssikerho järjestää opiskelijoille ja opiskelijamielisille lukukauden pituisia paritanssikursseja, joissa opetus tapahtuu viikottain. Näiden lisäksi kerho järjestää ekskursioita, tanssibileitä ja tiiviskursseja.
-
-Tervetuloa iloiseen joukkoomme! Nähdään tanssilattialla!"
-imageSrc="../img/picture/desktop/minttu-ilmari.jpg"
-reverse={true}/>
-
+  <div class="twin-view-wrapper">
+    <TwinView
+        textContent="Paritanssi on hauska, sosiaalinen ja liikunnallinen harrastus, jossa viihtyy jokainen. Tanssi on aina ollut osa kulttuuria ja historiaa, ja täten myös sivistystä. Jokainen törmää paritansseihin viimeistään elämänsä kohokohdissa, joista tunnetuimmat lienevät häiden valssit ja lukion vanhojen tanssit. Kansantanssijoihinkin saattaa törmätä Helsingin keskustassa ja välimeren lomakohteilla salsa on tuttu näky.
+        Tanssiharrastus on erinomainen harrastus, koska siinä yhdistyy monia asioita mielenkiintoiseksi kokonaisuudeksi. Paritanssissa musiikki ja liike kietoutuvat yhteen samalla, kun kokemus jaetaan tanssiparin kanssa. Laji ja musiikki luovat tunnetilan: tangossa on draamaa, fuskussa leikillisyyttä, buggissa vauhtia, valssissa arvokkuutta, bachatassa herkkyyttä ja sensuaalisuutta jne. Varmasti jokaiselle löytyy oma suosikki!"
+        imageSrc="../img/picture/desktop/annika-juuso.jpg"
+        reverse={false}
+    />
+    <TwinView
+        textContent="Suomalainen lavatanssi on erittäin lajirikas. Saman illan aikana voi olla helpostikin kymmenen eri lajia. Lajien moninaisuus on rikkautta ja se tuo tanssiin mielenkiintoa sekä tunnetilojen vaihtelevuutta. Pohjalaisten tanssikerho opettaa kaikkia yleisimpiä tanssilajeja, joita suomalaisilla lavoilla tanssitaan. Tanssikerhossa opettavat ammattiopettajat monien vuosien kokemuksella. Opettajat ja Pohjalaisten tanssikerhon lämminhenkinen yhteisö auttavat ja ovat tukena tanssikulttuuriin tutustumisessa.
+        Pohjalaisten tanssikerho järjestää opiskelijoille ja opiskelijamielisille lukukauden pituisia paritanssikursseja, joissa opetus tapahtuu viikottain. Näiden lisäksi kerho järjestää ekskursioita, tanssibileitä ja tiiviskursseja.
+        Tervetuloa iloiseen joukkoomme! Nähdään tanssilattialla!"
+        imageSrc="../img/picture/desktop/minttu-ilmari.jpg"
+        reverse={true}
+    />
+    </div>
 	</main>
 
 

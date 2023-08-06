@@ -1,3 +1,4 @@
+<!-- twinview.svelte -->
 <script lang="ts">
 	export let imageSrc;
 	export let textContent;
@@ -26,6 +27,8 @@
 	border: 2px solid #0b3c5d;
 	border-radius: 4px;
 	overflow: hidden;
+	margin: 0 auto;
+	width: 748px;
 }
 
 .left {

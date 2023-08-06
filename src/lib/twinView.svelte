@@ -15,7 +15,7 @@
 		</div>
 	</div>
 </div>
-
+``
 <style lang="scss">
 .twin-view {
 	margin-bottom: 36px;

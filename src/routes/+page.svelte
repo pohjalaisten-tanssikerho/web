@@ -3,8 +3,7 @@
   import dayjs from 'dayjs';
   import utc from 'dayjs/plugin/utc';
   import timezone from 'dayjs/plugin/timezone';
-  import TwinView from '../lib/TwinView.svelte';
-
+  import TwinView from '../lib/twinView.svelte';
 
   dayjs.extend(utc);
   dayjs.extend(timezone);

@@ -1,20 +1,11 @@
 import type { PageLoad } from './$types'
 export const load: PageLoad = async({params, fetch}) => {
-  const findEvent = async(url: string) => {
-    let response = await fetch(url)
-    let data = await response.json()
-    let obj = data.find(evt => evt.name === params.tapahtumaId + '.md')
-    return obj
+  let raw_url = 'https://raw.githubusercontent.com/pohjalaisten-tanssikerho/web-page/master/content/tapahtuma/' + params.tapahtumaId + '.md'
+  let res = await fetch(raw_url)
+  if (res.status !== 200) {
+    raw_url = raw_url.replace('tapahtuma', 'tapahtuma-arkisto')
+    res = await fetch(raw_url)
   }
-
-  let eventObj = await findEvent('https://api.github.com/repos/pohjalaisten-tanssikerho/web-page/contents/content/tapahtuma')
-
-  if (!eventObj) {
-    eventObj = await findEvent('https://api.github.com/repos/pohjalaisten-tanssikerho/web-page/contents/content/tapahtuma-arkisto')
-  }
-
-  const raw_url = eventObj.download_url
-  const res = await fetch(raw_url)
   const txtData: string = await res.text()
   const lines: string[] = txtData.split(/\r?\n/)
   const getTitleLine = (lines: string[]) => {

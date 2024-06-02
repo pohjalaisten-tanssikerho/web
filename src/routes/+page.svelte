@@ -4,6 +4,7 @@
   import utc from 'dayjs/plugin/utc';
   import timezone from 'dayjs/plugin/timezone';
   import TwinView from '../lib/twinView.svelte';
+  import ImageTextView from '../lib/imageTextView.svelte';
 
   dayjs.extend(utc);
   dayjs.extend(timezone);
@@ -84,15 +85,18 @@
 <h1>Tanssin opettajat</h1>
 <div class="teachers">
   <div>
-    <img src="/img/picture/desktop/kimmo-luukkonen.jpg" alt="Kimmo Luukkonen" width="380" height="460" />
-    <h2>Kimmo Luukkonen</h2>
-    <p>Kimmon tunneilla ei ole koskaan tylsää. Hän osaa keventää tunnelmaa vallattoman huumorinsa ja persoonansa avulla, mikä vapauttaa ja rentouttaa kehon tanssitunnelmaan. Tunneilla tanssii vapaammin ja paremmin kuin missään muualla.</p>
-    <p><a href="kimmoluukkonen.wordpress.com">Kimmosta saa lisää tietoa</a> hänen omilta sivuiltaan.</p>
+    <ImageTextView
+     imageSrc="../img/picture/desktop/kimmo-luukkonen.jpg"
+     heading= "Kimmo Luukkonen"
+    textContent="Kimmon tunneilla ei ole koskaan tylsää. Hän osaa keventää tunnelmaa vallattoman huumorinsa ja persoonansa avulla, mikä vapauttaa ja rentouttaa kehon tanssitunnelmaan. Tunneilla tanssii vapaammin ja paremmin kuin missään muualla."
+    />
   </div>
   <div>
-    <img src="img/picture/desktop/marianne-krause.jpg" alt="Marianne Krause" width="380" height="460" />
-    <h2>Marianne Krause</h2>
-    <p>Marianne on ilmiö. Usein hänen opetuksensa kuuluvat käytävillekin asti, joten jokainen voi olla varma, että takarivin oppilaatkin kuulevat. Marianne pitää oppilaansa hereillä, haastaa heitä ja etenee opetuksessaan määrätietoisesti. Hänen opetuksensa etenee pienin askelin; kuin asialla olisi taitava tarinan kertoja. Lopussa kaikki tanssin palaset loksahtavat yhteen ja oppilaat pääsevät tuntemaan ylpeyttä omasta etenemisestään ja oppimisestaan. Marianne vie “ahaa” elämyksen aivan uudelle tasolle.</p>
+    <ImageTextView
+    imageSrc="../img/picture/desktop/marianne-krause.jpg"
+    heading="Marianne Krause"
+    textContent= "Marianne on ilmiö. Usein hänen opetuksensa kuuluvat käytävillekin asti, joten jokainen voi olla varma, että takarivin oppilaatkin kuulevat. Marianne pitää oppilaansa hereillä, haastaa heitä ja etenee opetuksessaan määrätietoisesti. Hänen opetuksensa etenee pienin askelin; kuin asialla olisi taitava tarinan kertoja. Lopussa kaikki tanssin palaset loksahtavat yhteen ja oppilaat pääsevät tuntemaan ylpeyttä omasta etenemisestään ja oppimisestaan. Marianne vie “ahaa” elämyksen aivan uudelle tasolle."
+    />
   </div>
 </div>
 <h1>Pohjalaisten valtuuskunta</h1>
@@ -176,23 +180,13 @@
       }
     }
 }
-
   .teachers {
-    display: flex;
-    flex-wrap: wrap;
-    width: min(100% - 2rem, 890px);
-    div {
-      width: 380px;
-      padding-top: 1.2em;
-      h2 {
-        text-align: center;
-        padding: .5em 0;
-      }
-    }
-    img {
-      width: 380px;
-      height: 460px;
-    }
+  display: flex;
+  flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+
   }
   .center {
     text-align: center;
